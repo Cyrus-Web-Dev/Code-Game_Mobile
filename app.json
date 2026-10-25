@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Kode Tebak",
+    "slug": "kode-tebak-offline",
+    "version": "2.5.3",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#15131f",
+    "icon": "./assets/icon.png",
+    "plugins": [
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#15131f"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pilih foto profil dari galeri (disimpan hanya di perangkat)."
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kodetebak.offline"
+    },
+    "android": {
+      "package": "com.kodetebak.offline",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "monochromeImage": "./assets/adaptive-monochrome.png",
+        "backgroundColor": "#120f20"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

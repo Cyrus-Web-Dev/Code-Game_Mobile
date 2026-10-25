@@ -1,0 +1,1668 @@
+[
+ {
+  "name": "Binary/Hex",
+  "year": 1945,
+  "level": "hell",
+  "note": "Kode mesin mentah, byte demi byte.",
+  "noteEn": "Raw machine code, byte by byte."
+ },
+ {
+  "name": "Plankalkül",
+  "year": 1945,
+  "level": null,
+  "note": "Bahasa tingkat tinggi pertama (Konrad Zuse).",
+  "noteEn": "The first high-level programming language (Konrad Zuse)."
+ },
+ {
+  "name": "Short Code",
+  "year": 1949,
+  "level": null,
+  "note": "Bahasa tingkat tinggi elektronik pertama.",
+  "noteEn": "The first electronic high-level language."
+ },
+ {
+  "name": "Regex",
+  "year": 1951,
+  "level": null,
+  "note": "Pola untuk mencari dan mencocokkan teks.",
+  "noteEn": "Patterns for finding and matching text."
+ },
+ {
+  "name": "Autocode",
+  "year": 1952,
+  "level": null,
+  "note": "Kompilator pertama.",
+  "noteEn": "The first compiler."
+ },
+ {
+  "name": "FLOW-MATIC",
+  "year": 1955,
+  "level": null,
+  "note": "Bahasa berbasis kata bahasa Inggris (Grace Hopper).",
+  "noteEn": "English-word-based language (Grace Hopper)."
+ },
+ {
+  "name": "Fortran",
+  "year": 1957,
+  "level": "extreme",
+  "note": "Komputasi ilmiah; masih dipakai di simulasi cuaca.",
+  "noteEn": "Scientific computing; still used in weather simulation."
+ },
+ {
+  "name": "Lisp",
+  "year": 1958,
+  "level": "extreme",
+  "note": "Kode adalah data; leluhur banyak bahasa modern.",
+  "noteEn": "Code is data; ancestor of many modern languages."
+ },
+ {
+  "name": "COBOL",
+  "year": 1959,
+  "level": "extreme",
+  "note": "Bahasa bisnis dan perbankan; ribuan sistem masih berjalan.",
+  "noteEn": "Business and banking language; thousands of systems still run on it."
+ },
+ {
+  "name": "RPG",
+  "year": 1959,
+  "level": "extreme",
+  "note": "Pelaporan di mainframe IBM.",
+  "noteEn": "Report generation on IBM mainframes."
+ },
+ {
+  "name": "ALGOL 60",
+  "year": 1960,
+  "level": null,
+  "note": "Memengaruhi hampir semua bahasa modern.",
+  "noteEn": "Influenced nearly every modern language."
+ },
+ {
+  "name": "JOVIAL",
+  "year": 1960,
+  "level": null,
+  "note": "Bahasa pertahanan Amerika.",
+  "noteEn": "A US defense language."
+ },
+ {
+  "name": "Simula",
+  "year": 1962,
+  "level": "extreme",
+  "note": "Bahasa OOP pertama.",
+  "noteEn": "The first OOP language."
+ },
+ {
+  "name": "SNOBOL",
+  "year": 1962,
+  "level": "extreme",
+  "note": "Pengolahan string dan pola.",
+  "noteEn": "String and pattern processing."
+ },
+ {
+  "name": "CPL",
+  "year": 1963,
+  "level": null,
+  "note": "Leluhur BCPL, B, lalu C.",
+  "noteEn": "Ancestor of BCPL, B, then C."
+ },
+ {
+  "name": "BASIC",
+  "year": 1964,
+  "level": "extreme",
+  "note": "Dibuat agar pemula bisa memprogram.",
+  "noteEn": "Created so beginners could program."
+ },
+ {
+  "name": "PL/I",
+  "year": 1964,
+  "level": "extreme",
+  "note": "Gabungan Fortran, COBOL, dan ALGOL dari IBM.",
+  "noteEn": "IBM's blend of Fortran, COBOL, and ALGOL."
+ },
+ {
+  "name": "APL",
+  "year": 1966,
+  "level": "extreme",
+  "note": "Simbol khusus untuk komputasi array.",
+  "noteEn": "Special symbols for array computation."
+ },
+ {
+  "name": "MUMPS",
+  "year": 1966,
+  "level": "extreme",
+  "note": "Basis data rumah sakit.",
+  "noteEn": "The hospital database language."
+ },
+ {
+  "name": "Logo",
+  "year": 1967,
+  "level": "extreme",
+  "note": "Kura-kura grafis untuk anak.",
+  "noteEn": "The turtle graphics language for kids."
+ },
+ {
+  "name": "ALGOL 68",
+  "year": 1968,
+  "level": "extreme",
+  "note": "Leluhur Pascal dan C.",
+  "noteEn": "Ancestor of Pascal and C."
+ },
+ {
+  "name": "B",
+  "year": 1969,
+  "level": "extreme",
+  "note": "Pendahulu langsung C.",
+  "noteEn": "The direct predecessor of C."
+ },
+ {
+  "name": "Forth",
+  "year": 1970,
+  "level": "extreme",
+  "note": "Bahasa berbasis stack dengan notasi postfix.",
+  "noteEn": "A stack-based language with postfix notation."
+ },
+ {
+  "name": "Pascal",
+  "year": 1970,
+  "level": "extreme",
+  "note": "Bahasa pengajaran terstruktur.",
+  "noteEn": "A structured teaching language."
+ },
+ {
+  "name": "C",
+  "year": 1972,
+  "level": "easy",
+  "note": "Dasar sistem operasi; memori dikelola manual.",
+  "noteEn": "Foundation of operating systems; manual memory management."
+ },
+ {
+  "name": "INTERCAL",
+  "year": 1972,
+  "level": "hell",
+  "note": "Parodi bahasa pemrograman; sopan itu wajib.",
+  "noteEn": "A parody language; politeness is mandatory."
+ },
+ {
+  "name": "Prolog",
+  "year": 1972,
+  "level": "extreme",
+  "note": "Pemrograman logika.",
+  "noteEn": "Logic programming."
+ },
+ {
+  "name": "Smalltalk",
+  "year": 1972,
+  "level": "extreme",
+  "note": "OOP murni; menginspirasi Java dan Ruby.",
+  "noteEn": "Pure OOP; inspired Java and Ruby."
+ },
+ {
+  "name": "ML",
+  "year": 1973,
+  "level": null,
+  "note": "Pelopor tipe inferensi.",
+  "noteEn": "Pioneer of type inference."
+ },
+ {
+  "name": "sed",
+  "year": 1974,
+  "level": null,
+  "note": "Editor aliran teks.",
+  "noteEn": "Stream text editor."
+ },
+ {
+  "name": "SQL",
+  "year": 1974,
+  "level": "easy",
+  "note": "Bahasa query basis data relasional.",
+  "noteEn": "The query language for relational databases."
+ },
+ {
+  "name": "6502 Assembly",
+  "year": 1975,
+  "level": "extreme",
+  "note": "Mesin Apple II, Commodore 64, dan NES.",
+  "noteEn": "The chip in the Apple II, Commodore 64, and NES."
+ },
+ {
+  "name": "CLU",
+  "year": 1975,
+  "level": null,
+  "note": "Pelopor tipe data abstrak.",
+  "noteEn": "Pioneer of abstract data types."
+ },
+ {
+  "name": "Scheme",
+  "year": 1975,
+  "level": "extreme",
+  "note": "Lisp minimalis untuk pengajaran.",
+  "noteEn": "A minimalist Lisp for teaching."
+ },
+ {
+  "name": "Make",
+  "year": 1976,
+  "level": null,
+  "note": "Alat otomatisasi build berbasis aturan.",
+  "noteEn": "A rule-based build automation tool."
+ },
+ {
+  "name": "SAS",
+  "year": 1976,
+  "level": null,
+  "note": "Perangkat lunak statistik dan analitik korporat.",
+  "noteEn": "Statistical and enterprise analytics software."
+ },
+ {
+  "name": "Awk",
+  "year": 1977,
+  "level": "extreme",
+  "note": "Pemrosesan teks berbasis pola.",
+  "noteEn": "Pattern-based text processing."
+ },
+ {
+  "name": "Icon",
+  "year": 1977,
+  "level": "extreme",
+  "note": "Pencarian pola dan string.",
+  "noteEn": "Pattern and string searching."
+ },
+ {
+  "name": "Assembly x86",
+  "year": 1978,
+  "level": "extreme",
+  "note": "Instruksi mesin x86, langsung bicara ke CPU.",
+  "noteEn": "x86 machine instructions, talking directly to the CPU."
+ },
+ {
+  "name": "Modula-2",
+  "year": 1978,
+  "level": "extreme",
+  "note": "Penerus Pascal dengan modul.",
+  "noteEn": "A Pascal successor with modules."
+ },
+ {
+  "name": "Rexx",
+  "year": 1979,
+  "level": "extreme",
+  "note": "Skrip mainframe IBM.",
+  "noteEn": "Scripting on IBM mainframes."
+ },
+ {
+  "name": "Ada",
+  "year": 1980,
+  "level": "extreme",
+  "note": "Bahasa aman untuk penerbangan dan militer.",
+  "noteEn": "A safe language for aviation and defense."
+ },
+ {
+  "name": "ABAP",
+  "year": 1983,
+  "level": "extreme",
+  "note": "Bahasa sistem SAP.",
+  "noteEn": "SAP's system language."
+ },
+ {
+  "name": "Occam",
+  "year": 1983,
+  "level": null,
+  "note": "Konkurensi untuk transputer.",
+  "noteEn": "Concurrency for transputers."
+ },
+ {
+  "name": "Standard ML",
+  "year": 1983,
+  "level": "extreme",
+  "note": "Fungsional bertipe dengan semantik formal.",
+  "noteEn": "Statically typed functional language with formal semantics."
+ },
+ {
+  "name": "VHDL",
+  "year": 1983,
+  "level": null,
+  "note": "Deskripsi perangkat keras untuk chip dan FPGA.",
+  "noteEn": "Hardware description for chips and FPGAs."
+ },
+ {
+  "name": "Common Lisp",
+  "year": 1984,
+  "level": null,
+  "note": "Standarisasi keluarga Lisp.",
+  "noteEn": "Standardization of the Lisp family."
+ },
+ {
+  "name": "LaTeX",
+  "year": 1984,
+  "level": null,
+  "note": "Sistem penyusun dokumen ilmiah.",
+  "noteEn": "A system for typesetting scientific documents."
+ },
+ {
+  "name": "MATLAB",
+  "year": 1984,
+  "level": "hard",
+  "note": "Komputasi numerik dan matriks.",
+  "noteEn": "Numerical computing and matrices."
+ },
+ {
+  "name": "Objective-C",
+  "year": 1984,
+  "level": "hard",
+  "note": "Bahasa lama aplikasi Apple.",
+  "noteEn": "The old language of Apple apps."
+ },
+ {
+  "name": "Verilog",
+  "year": 1984,
+  "level": null,
+  "note": "Mendeskripsikan perangkat keras digital.",
+  "noteEn": "Describes digital hardware."
+ },
+ {
+  "name": "ARM Assembly",
+  "year": 1985,
+  "level": "extreme",
+  "note": "Assembly prosesor ponsel dan embedded.",
+  "noteEn": "Assembly for phone and embedded processors."
+ },
+ {
+  "name": "C++",
+  "year": 1985,
+  "level": "easy",
+  "note": "C dengan OOP dan kontrol performa.",
+  "noteEn": "C with OOP and performance control."
+ },
+ {
+  "name": "MIPS Assembly",
+  "year": 1985,
+  "level": "extreme",
+  "note": "Assembly RISC klasik untuk pengajaran.",
+  "noteEn": "Classic RISC assembly for teaching."
+ },
+ {
+  "name": "Miranda",
+  "year": 1985,
+  "level": null,
+  "note": "Cikal bakal Haskell.",
+  "noteEn": "Precursor to Haskell."
+ },
+ {
+  "name": "Eiffel",
+  "year": 1986,
+  "level": "extreme",
+  "note": "Design by Contract.",
+  "noteEn": "Design by Contract."
+ },
+ {
+  "name": "Erlang",
+  "year": 1986,
+  "level": "hard",
+  "note": "Sistem telekomunikasi tahan gagal.",
+  "noteEn": "Fault-tolerant telecom systems."
+ },
+ {
+  "name": "LabVIEW",
+  "year": 1986,
+  "level": null,
+  "note": "Pemrograman visual untuk instrumen dan pengukuran.",
+  "noteEn": "Visual programming for instruments and measurement."
+ },
+ {
+  "name": "Fractran",
+  "year": 1987,
+  "level": "hell",
+  "note": "Program berupa daftar pecahan.",
+  "noteEn": "A program is a list of fractions."
+ },
+ {
+  "name": "Oberon",
+  "year": 1987,
+  "level": "extreme",
+  "note": "Penerus Modula-2 oleh Niklaus Wirth.",
+  "noteEn": "Niklaus Wirth's successor to Modula-2."
+ },
+ {
+  "name": "Perl",
+  "year": 1987,
+  "level": "easy",
+  "note": "Pengolah teks dan skrip sistem klasik.",
+  "noteEn": "Classic text processing and system scripting."
+ },
+ {
+  "name": "Self",
+  "year": 1987,
+  "level": null,
+  "note": "OOP berbasis prototipe.",
+  "noteEn": "Prototype-based OOP."
+ },
+ {
+  "name": "Octave",
+  "year": 1988,
+  "level": null,
+  "note": "Alternatif sumber terbuka untuk MATLAB.",
+  "noteEn": "An open-source alternative to MATLAB."
+ },
+ {
+  "name": "Tcl",
+  "year": 1988,
+  "level": "hard",
+  "note": "Skrip dan GUI Tk.",
+  "noteEn": "Scripting and Tk GUIs."
+ },
+ {
+  "name": "Wolfram Language",
+  "year": 1988,
+  "level": "extreme",
+  "note": "Komputasi simbolik Mathematica.",
+  "noteEn": "Symbolic computation in Mathematica."
+ },
+ {
+  "name": "Bash",
+  "year": 1989,
+  "level": "easy",
+  "note": "Shell skrip Unix/Linux.",
+  "noteEn": "Unix/Linux shell scripting."
+ },
+ {
+  "name": "Coq",
+  "year": 1989,
+  "level": null,
+  "note": "Asisten pembuktian formal (kini Rocq).",
+  "noteEn": "A formal proof assistant (now Rocq)."
+ },
+ {
+  "name": "Haskell",
+  "year": 1990,
+  "level": "hard",
+  "note": "Fungsional murni dengan lazy evaluation.",
+  "noteEn": "Purely functional with lazy evaluation."
+ },
+ {
+  "name": "Python",
+  "year": 1991,
+  "level": "easy",
+  "note": "Terbaca dan serbaguna: web, data, AI.",
+  "noteEn": "Readable and versatile: web, data, AI."
+ },
+ {
+  "name": "Visual Basic",
+  "year": 1991,
+  "level": "easy",
+  "note": "Bahasa berbasis BASIC dari Microsoft.",
+  "noteEn": "Microsoft's BASIC-based language."
+ },
+ {
+  "name": "AppleScript",
+  "year": 1993,
+  "level": null,
+  "note": "Otomatisasi aplikasi di macOS.",
+  "noteEn": "Application automation on macOS."
+ },
+ {
+  "name": "Befunge",
+  "year": 1993,
+  "level": "hell",
+  "note": "Program 2D; pointer bergerak di grid.",
+  "noteEn": "A 2D program; the pointer moves around a grid."
+ },
+ {
+  "name": "Brainfuck",
+  "year": 1993,
+  "level": "hell",
+  "note": "Esoterik dengan 8 perintah saja.",
+  "noteEn": "An esoteric language with only 8 commands."
+ },
+ {
+  "name": "HTML",
+  "year": 1993,
+  "level": "easy",
+  "note": "Markup kerangka halaman web.",
+  "noteEn": "Markup that structures web pages."
+ },
+ {
+  "name": "Lua",
+  "year": 1993,
+  "level": "easy",
+  "note": "Skrip ringan untuk game dan embedded.",
+  "noteEn": "Lightweight scripting for games and embedded use."
+ },
+ {
+  "name": "R",
+  "year": 1993,
+  "level": "easy",
+  "note": "Statistik dan analisis data.",
+  "noteEn": "Statistics and data analysis."
+ },
+ {
+  "name": "VBA",
+  "year": 1993,
+  "level": "easy",
+  "note": "Makro Excel dan Office.",
+  "noteEn": "Excel and Office macros."
+ },
+ {
+  "name": "ColdFusion",
+  "year": 1995,
+  "level": null,
+  "note": "Skrip web berbasis tag.",
+  "noteEn": "Tag-based web scripting."
+ },
+ {
+  "name": "Delphi",
+  "year": 1995,
+  "level": "extreme",
+  "note": "Pascal berorientasi objek untuk aplikasi Windows.",
+  "noteEn": "Object-oriented Pascal for Windows apps."
+ },
+ {
+  "name": "Java",
+  "year": 1995,
+  "level": "easy",
+  "note": "Write once, run anywhere lewat JVM.",
+  "noteEn": "Write once, run anywhere via the JVM."
+ },
+ {
+  "name": "JavaScript",
+  "year": 1995,
+  "level": "easy",
+  "note": "Bahasa browser, kini juga di server.",
+  "noteEn": "The language of the browser, now on servers too."
+ },
+ {
+  "name": "PHP",
+  "year": 1995,
+  "level": "easy",
+  "note": "Bahasa server web paling populer.",
+  "noteEn": "The most popular web server language."
+ },
+ {
+  "name": "Racket",
+  "year": 1995,
+  "level": "hard",
+  "note": "Lisp untuk pembuatan bahasa.",
+  "noteEn": "A Lisp for building languages."
+ },
+ {
+  "name": "Ruby",
+  "year": 1995,
+  "level": "easy",
+  "note": "Ramah programmer; basis Rails.",
+  "noteEn": "Programmer-friendly; the basis of Rails."
+ },
+ {
+  "name": "CSS",
+  "year": 1996,
+  "level": "easy",
+  "note": "Mengatur tampilan halaman web.",
+  "noteEn": "Styles web pages."
+ },
+ {
+  "name": "OCaml",
+  "year": 1996,
+  "level": "hard",
+  "note": "Keluarga ML dengan inferensi tipe.",
+  "noteEn": "ML family with type inference."
+ },
+ {
+  "name": "Rebol",
+  "year": 1997,
+  "level": null,
+  "note": "Bahasa data dan DSL.",
+  "noteEn": "A data and DSL language."
+ },
+ {
+  "name": "HQ9+",
+  "year": 1998,
+  "level": "hell",
+  "note": "Hanya 4 perintah: H, Q, 9, +.",
+  "noteEn": "Only 4 commands: H, Q, 9, +."
+ },
+ {
+  "name": "Malbolge",
+  "year": 1998,
+  "level": "hell",
+  "note": "Sengaja dirancang nyaris mustahil dipakai.",
+  "noteEn": "Deliberately designed to be nearly impossible to use."
+ },
+ {
+  "name": "Unlambda",
+  "year": 1999,
+  "level": "hell",
+  "note": "Fungsional murni tanpa variabel.",
+  "noteEn": "Purely functional with no variables."
+ },
+ {
+  "name": "ActionScript",
+  "year": 2000,
+  "level": null,
+  "note": "Skrip Flash.",
+  "noteEn": "Flash scripting."
+ },
+ {
+  "name": "C#",
+  "year": 2000,
+  "level": "easy",
+  "note": "Bahasa Microsoft untuk .NET dan Unity.",
+  "noteEn": "Microsoft's language for .NET and Unity."
+ },
+ {
+  "name": "Thue",
+  "year": 2000,
+  "level": "hell",
+  "note": "Hanya aturan penulisan ulang string.",
+  "noteEn": "Nothing but string rewriting rules."
+ },
+ {
+  "name": "D",
+  "year": 2001,
+  "level": "hard",
+  "note": "C++ yang lebih bersih.",
+  "noteEn": "A cleaner C++."
+ },
+ {
+  "name": "JSON",
+  "year": 2001,
+  "level": null,
+  "note": "Format pertukaran data yang ringan.",
+  "noteEn": "A lightweight data interchange format."
+ },
+ {
+  "name": "Ook!",
+  "year": 2001,
+  "level": "hell",
+  "note": "Brainfuck untuk orangutan.",
+  "noteEn": "Brainfuck for orangutans."
+ },
+ {
+  "name": "Processing",
+  "year": 2001,
+  "level": null,
+  "note": "Seni dan desain generatif.",
+  "noteEn": "Generative art and design."
+ },
+ {
+  "name": "Shakespeare",
+  "year": 2001,
+  "level": "hell",
+  "note": "Program berbentuk naskah drama.",
+  "noteEn": "Programs written as a play script."
+ },
+ {
+  "name": "Underload",
+  "year": 2001,
+  "level": "hell",
+  "note": "Berbasis stack string dengan tanda kurung.",
+  "noteEn": "A stack-of-strings language built on parentheses."
+ },
+ {
+  "name": "YAML",
+  "year": 2001,
+  "level": null,
+  "note": "Format konfigurasi yang mudah dibaca manusia.",
+  "noteEn": "A human-friendly configuration format."
+ },
+ {
+  "name": "Chef",
+  "year": 2002,
+  "level": "hell",
+  "note": "Program berbentuk resep masakan.",
+  "noteEn": "Programs written as a cooking recipe."
+ },
+ {
+  "name": "Piet",
+  "year": 2002,
+  "level": "hell",
+  "note": "Program berupa gambar abstrak.",
+  "noteEn": "Programs are abstract images."
+ },
+ {
+  "name": "Cow",
+  "year": 2003,
+  "level": "hell",
+  "note": "Bahasa esoterik berbasis suara sapi.",
+  "noteEn": "An esoteric language based on cow sounds."
+ },
+ {
+  "name": "Groovy",
+  "year": 2003,
+  "level": "hard",
+  "note": "Bahasa dinamis di JVM.",
+  "noteEn": "A dynamic language on the JVM."
+ },
+ {
+  "name": "Nix",
+  "year": 2003,
+  "level": null,
+  "note": "Bahasa fungsional untuk build dan konfigurasi yang dapat diulang.",
+  "noteEn": "A functional language for reproducible builds and configuration."
+ },
+ {
+  "name": "Whitespace",
+  "year": 2003,
+  "level": "hell",
+  "note": "Hanya spasi, tab, dan baris baru yang bermakna.",
+  "noteEn": "Only spaces, tabs, and newlines are meaningful."
+ },
+ {
+  "name": "Markdown",
+  "year": 2004,
+  "level": null,
+  "note": "Format teks ringan yang diubah menjadi HTML.",
+  "noteEn": "A lightweight text format that converts to HTML."
+ },
+ {
+  "name": "Pytest",
+  "year": 2004,
+  "level": null,
+  "note": "Kerangka pengujian untuk Python.",
+  "noteEn": "A testing framework for Python."
+ },
+ {
+  "name": "Rails",
+  "year": 2004,
+  "level": "normal",
+  "note": "Convention over configuration.",
+  "noteEn": "Convention over configuration."
+ },
+ {
+  "name": "Scala",
+  "year": 2004,
+  "level": "hard",
+  "note": "Fungsional + OOP di JVM.",
+  "noteEn": "Functional plus OOP on the JVM."
+ },
+ {
+  "name": "Selenium",
+  "year": 2004,
+  "level": null,
+  "note": "Otomatisasi browser untuk pengujian.",
+  "noteEn": "Browser automation for testing."
+ },
+ {
+  "name": "CakePHP",
+  "year": 2005,
+  "level": null,
+  "note": "Framework PHP MVC.",
+  "noteEn": "MVC PHP framework."
+ },
+ {
+  "name": "Django",
+  "year": 2005,
+  "level": "normal",
+  "note": "Framework Python batteries-included.",
+  "noteEn": "Batteries-included Python framework."
+ },
+ {
+  "name": "F#",
+  "year": 2005,
+  "level": "hard",
+  "note": "Fungsional di ekosistem .NET.",
+  "noteEn": "Functional programming in the .NET ecosystem."
+ },
+ {
+  "name": "Haxe",
+  "year": 2005,
+  "level": null,
+  "note": "Satu bahasa, banyak target kompilasi.",
+  "noteEn": "One language, many compile targets."
+ },
+ {
+  "name": "Symfony",
+  "year": 2005,
+  "level": "normal",
+  "note": "Framework PHP berbasis komponen.",
+  "noteEn": "Component-based PHP framework."
+ },
+ {
+  "name": "Unity",
+  "year": 2005,
+  "level": "normal",
+  "note": "Mesin game berbasis C#.",
+  "noteEn": "Game engine based on C#."
+ },
+ {
+  "name": "CodeIgniter",
+  "year": 2006,
+  "level": null,
+  "note": "Framework PHP ringan.",
+  "noteEn": "Lightweight PHP framework."
+ },
+ {
+  "name": "jQuery",
+  "year": 2006,
+  "level": "normal",
+  "note": "Manipulasi DOM yang mendominasi era 2010-an.",
+  "noteEn": "DOM manipulation that dominated the 2010s."
+ },
+ {
+  "name": "NumPy",
+  "year": 2006,
+  "level": null,
+  "note": "Komputasi array numerik di Python.",
+  "noteEn": "Numerical array computing in Python."
+ },
+ {
+  "name": "PowerShell",
+  "year": 2006,
+  "level": "easy",
+  "note": "Shell dan otomasi Windows berbasis objek.",
+  "noteEn": "Object-based shell and automation for Windows."
+ },
+ {
+  "name": "Vala",
+  "year": 2006,
+  "level": "hard",
+  "note": "Bahasa GNOME dengan sintaks mirip C#.",
+  "noteEn": "GNOME language with C#-like syntax."
+ },
+ {
+  "name": "Agda",
+  "year": 2007,
+  "level": null,
+  "note": "Bahasa fungsional dengan tipe dependen.",
+  "noteEn": "A functional language with dependent types."
+ },
+ {
+  "name": "Clojure",
+  "year": 2007,
+  "level": "hard",
+  "note": "Lisp modern di JVM.",
+  "noteEn": "A modern Lisp on the JVM."
+ },
+ {
+  "name": "Grass",
+  "year": 2007,
+  "level": "hell",
+  "note": "Hanya huruf w, W, dan v.",
+  "noteEn": "Only the letters w, W, and v."
+ },
+ {
+  "name": "Idris",
+  "year": 2007,
+  "level": null,
+  "note": "Tipe dependen.",
+  "noteEn": "Dependent types."
+ },
+ {
+  "name": "LOLCODE",
+  "year": 2007,
+  "level": "hell",
+  "note": "Bahasa gaul meme kucing.",
+  "noteEn": "The cat-meme slang language."
+ },
+ {
+  "name": "Play",
+  "year": 2007,
+  "level": null,
+  "note": "Framework web JVM.",
+  "noteEn": "JVM web framework."
+ },
+ {
+  "name": "Scikit-learn",
+  "year": 2007,
+  "level": null,
+  "note": "Machine learning klasik di Python.",
+  "noteEn": "Classic machine learning in Python."
+ },
+ {
+  "name": "Scratch",
+  "year": 2007,
+  "level": null,
+  "note": "Bahasa blok visual untuk belajar pemrograman.",
+  "noteEn": "A visual block language for learning to program."
+ },
+ {
+  "name": "Sinatra",
+  "year": 2007,
+  "level": "normal",
+  "note": "DSL web minimalis Ruby.",
+  "noteEn": "Minimal Ruby web DSL."
+ },
+ {
+  "name": "Taxi",
+  "year": 2007,
+  "level": "hell",
+  "note": "Pemrograman sebagai sopir taksi.",
+  "noteEn": "Programming as a taxi driver."
+ },
+ {
+  "name": "Grails",
+  "year": 2008,
+  "level": null,
+  "note": "Framework Groovy.",
+  "noteEn": "Groovy framework."
+ },
+ {
+  "name": "Nim",
+  "year": 2008,
+  "level": "hard",
+  "note": "Sintaks mirip Python, kompilasi ke C.",
+  "noteEn": "Python-like syntax, compiles to C."
+ },
+ {
+  "name": "Pandas",
+  "year": 2008,
+  "level": null,
+  "note": "Analisis data tabular di Python.",
+  "noteEn": "Tabular data analysis in Python."
+ },
+ {
+  "name": "Yii",
+  "year": 2008,
+  "level": null,
+  "note": "Framework PHP berperforma tinggi.",
+  "noteEn": "High-performance PHP framework."
+ },
+ {
+  "name": "Chapel",
+  "year": 2009,
+  "level": "hard",
+  "note": "Komputasi paralel skala besar.",
+  "noteEn": "Large-scale parallel computing."
+ },
+ {
+  "name": "CoffeeScript",
+  "year": 2009,
+  "level": null,
+  "note": "Sintaks ringkas yang dikompilasi ke JavaScript.",
+  "noteEn": "Terse syntax that compiles to JavaScript."
+ },
+ {
+  "name": "Go",
+  "year": 2009,
+  "level": "easy",
+  "note": "Sederhana dan konkuren; dibuat di Google.",
+  "noteEn": "Simple and concurrent; created at Google."
+ },
+ {
+  "name": "Node.js",
+  "year": 2009,
+  "level": null,
+  "note": "Menjalankan JavaScript di server.",
+  "noteEn": "Runs JavaScript on the server."
+ },
+ {
+  "name": "Angular",
+  "year": 2010,
+  "level": "normal",
+  "note": "Framework lengkap dari Google.",
+  "noteEn": "Full-featured framework from Google."
+ },
+ {
+  "name": "Backbone.js",
+  "year": 2010,
+  "level": null,
+  "note": "MVC ringan untuk web.",
+  "noteEn": "Lightweight MVC for the web."
+ },
+ {
+  "name": "Express",
+  "year": 2010,
+  "level": "normal",
+  "note": "Server minimalis untuk Node.js.",
+  "noteEn": "Minimal server for Node.js."
+ },
+ {
+  "name": "Flask",
+  "year": 2010,
+  "level": "normal",
+  "note": "Mikro-framework Python.",
+  "noteEn": "Python micro-framework."
+ },
+ {
+  "name": "Knockout",
+  "year": 2010,
+  "level": null,
+  "note": "Pengikatan data MVVM.",
+  "noteEn": "MVVM data binding."
+ },
+ {
+  "name": "RISC-V Assembly",
+  "year": 2010,
+  "level": "extreme",
+  "note": "Arsitektur set instruksi terbuka.",
+  "noteEn": "An open instruction set architecture."
+ },
+ {
+  "name": "Rust",
+  "year": 2010,
+  "level": "hard",
+  "note": "Aman memori tanpa GC lewat ownership.",
+  "noteEn": "Memory-safe without a GC through ownership."
+ },
+ {
+  "name": "Three.js",
+  "year": 2010,
+  "level": null,
+  "note": "Grafik 3D di browser.",
+  "noteEn": "3D graphics in the browser."
+ },
+ {
+  "name": "Bootstrap",
+  "year": 2011,
+  "level": "normal",
+  "note": "Kit komponen CSS dari Twitter.",
+  "noteEn": "CSS component kit from Twitter."
+ },
+ {
+  "name": "D3.js",
+  "year": 2011,
+  "level": null,
+  "note": "Visualisasi data berbasis web.",
+  "noteEn": "Web-based data visualization."
+ },
+ {
+  "name": "Dart",
+  "year": 2011,
+  "level": "hard",
+  "note": "Bahasa di balik Flutter.",
+  "noteEn": "The language behind Flutter."
+ },
+ {
+  "name": "Deadfish",
+  "year": 2011,
+  "level": "hell",
+  "note": "Hanya 4 perintah: i, d, s, o.",
+  "noteEn": "Only 4 commands: i, d, s, o."
+ },
+ {
+  "name": "Elixir",
+  "year": 2011,
+  "level": "hard",
+  "note": "Fungsional dan konkuren di atas BEAM.",
+  "noteEn": "Functional and concurrent on the BEAM."
+ },
+ {
+  "name": "Ember.js",
+  "year": 2011,
+  "level": null,
+  "note": "Convention-first di sisi klien.",
+  "noteEn": "Convention-first client-side framework."
+ },
+ {
+  "name": "Firebase",
+  "year": 2011,
+  "level": null,
+  "note": "Platform backend dan basis data dari Google.",
+  "noteEn": "Google's backend and database platform."
+ },
+ {
+  "name": "Kotlin",
+  "year": 2011,
+  "level": "hard",
+  "note": "Bahasa utama Android modern.",
+  "noteEn": "The main language of modern Android."
+ },
+ {
+  "name": "Laravel",
+  "year": 2011,
+  "level": "normal",
+  "note": "Framework PHP elegan.",
+  "noteEn": "The elegant PHP framework."
+ },
+ {
+  "name": "Red",
+  "year": 2011,
+  "level": null,
+  "note": "Penerus Rebol.",
+  "noteEn": "Successor to Rebol."
+ },
+ {
+  "name": "Xamarin",
+  "year": 2011,
+  "level": null,
+  "note": "Aplikasi mobile dengan C#.",
+  "noteEn": "Mobile apps with C#."
+ },
+ {
+  "name": "Elm",
+  "year": 2012,
+  "level": "hard",
+  "note": "Fungsional murni untuk web tanpa error runtime.",
+  "noteEn": "Purely functional for the web with no runtime errors."
+ },
+ {
+  "name": "Julia",
+  "year": 2012,
+  "level": "hard",
+  "note": "Komputasi ilmiah berkecepatan tinggi.",
+  "noteEn": "High-performance scientific computing."
+ },
+ {
+  "name": "Meteor",
+  "year": 2012,
+  "level": null,
+  "note": "JavaScript full-stack realtime.",
+  "noteEn": "Realtime full-stack JavaScript."
+ },
+ {
+  "name": "TypeScript",
+  "year": 2012,
+  "level": "easy",
+  "note": "JavaScript dengan tipe statis.",
+  "noteEn": "JavaScript with static types."
+ },
+ {
+  "name": "Webpack",
+  "year": 2012,
+  "level": null,
+  "note": "Pembundel modul JavaScript.",
+  "noteEn": "A JavaScript module bundler."
+ },
+ {
+  "name": "ArnoldC",
+  "year": 2013,
+  "level": "hell",
+  "note": "Kutipan film Schwarzenegger.",
+  "noteEn": "Schwarzenegger movie quotes."
+ },
+ {
+  "name": "Docker",
+  "year": 2013,
+  "level": null,
+  "note": "Mengemas aplikasi dalam kontainer.",
+  "noteEn": "Packages applications in containers."
+ },
+ {
+  "name": "Dockerfile",
+  "year": 2013,
+  "level": null,
+  "note": "Resep membangun image kontainer.",
+  "noteEn": "The recipe for building a container image."
+ },
+ {
+  "name": "Electron",
+  "year": 2013,
+  "level": "normal",
+  "note": "Aplikasi desktop dengan teknologi web.",
+  "noteEn": "Desktop apps with web technology."
+ },
+ {
+  "name": "Ionic",
+  "year": 2013,
+  "level": null,
+  "note": "Aplikasi hibrida.",
+  "noteEn": "Hybrid apps."
+ },
+ {
+  "name": "Koa",
+  "year": 2013,
+  "level": null,
+  "note": "Pengganti Express dari tim yang sama.",
+  "noteEn": "Express's successor from the same team."
+ },
+ {
+  "name": "Lean",
+  "year": 2013,
+  "level": null,
+  "note": "Bahasa sekaligus pembuktian teorema.",
+  "noteEn": "A language and a theorem prover in one."
+ },
+ {
+  "name": "PureScript",
+  "year": 2013,
+  "level": null,
+  "note": "Fungsional murni bertipe yang dikompilasi ke JavaScript.",
+  "noteEn": "Purely functional and typed, compiling to JavaScript."
+ },
+ {
+  "name": "React",
+  "year": 2013,
+  "level": "normal",
+  "note": "Pustaka UI berbasis komponen dari Meta.",
+  "noteEn": "Component-based UI library from Meta."
+ },
+ {
+  "name": "Crystal",
+  "year": 2014,
+  "level": "hard",
+  "note": "Sintaks mirip Ruby, dikompilasi.",
+  "noteEn": "Ruby-like syntax, compiled."
+ },
+ {
+  "name": "GDScript",
+  "year": 2014,
+  "level": "hard",
+  "note": "Skrip mesin game Godot.",
+  "noteEn": "Scripting language of the Godot game engine."
+ },
+ {
+  "name": "Gin",
+  "year": 2014,
+  "level": "normal",
+  "note": "Web framework Go yang cepat.",
+  "noteEn": "A fast Go web framework."
+ },
+ {
+  "name": "Godot",
+  "year": 2014,
+  "level": null,
+  "note": "Mesin game sumber terbuka.",
+  "noteEn": "Open-source game engine."
+ },
+ {
+  "name": "Hack",
+  "year": 2014,
+  "level": "hard",
+  "note": "PHP bertipe dari Meta.",
+  "noteEn": "Typed PHP from Meta."
+ },
+ {
+  "name": "Jest",
+  "year": 2014,
+  "level": null,
+  "note": "Kerangka pengujian JavaScript.",
+  "noteEn": "A JavaScript testing framework."
+ },
+ {
+  "name": "Kubernetes",
+  "year": 2014,
+  "level": null,
+  "note": "Orkestrasi kontainer skala besar.",
+  "noteEn": "Container orchestration at scale."
+ },
+ {
+  "name": "Phoenix",
+  "year": 2014,
+  "level": "normal",
+  "note": "Framework web Elixir.",
+  "noteEn": "Elixir web framework."
+ },
+ {
+  "name": "Pony",
+  "year": 2014,
+  "level": "hard",
+  "note": "Aktor aman tanpa data race.",
+  "noteEn": "Actors that are safe from data races."
+ },
+ {
+  "name": "Solidity",
+  "year": 2014,
+  "level": "hard",
+  "note": "Kontrak pintar di Ethereum.",
+  "noteEn": "Smart contracts on Ethereum."
+ },
+ {
+  "name": "Spring Boot",
+  "year": 2014,
+  "level": "normal",
+  "note": "Framework Java untuk layanan produksi.",
+  "noteEn": "Java framework for production services."
+ },
+ {
+  "name": "Swift",
+  "year": 2014,
+  "level": "hard",
+  "note": "Bahasa modern Apple.",
+  "noteEn": "Apple's modern language."
+ },
+ {
+  "name": "Vue",
+  "year": 2014,
+  "level": "normal",
+  "note": "Framework UI progresif.",
+  "noteEn": "The progressive UI framework."
+ },
+ {
+  "name": "Gatsby",
+  "year": 2015,
+  "level": null,
+  "note": "Generator situs berbasis React.",
+  "noteEn": "React-based static site generator."
+ },
+ {
+  "name": "GraphQL",
+  "year": 2015,
+  "level": null,
+  "note": "Bahasa kueri API buatan Facebook.",
+  "noteEn": "An API query language created at Facebook."
+ },
+ {
+  "name": "Keras",
+  "year": 2015,
+  "level": null,
+  "note": "API tingkat tinggi untuk deep learning.",
+  "noteEn": "A high-level deep learning API."
+ },
+ {
+  "name": "Preact",
+  "year": 2015,
+  "level": "normal",
+  "note": "Alternatif React 3 KB.",
+  "noteEn": "A 3 KB alternative to React."
+ },
+ {
+  "name": "Raku",
+  "year": 2015,
+  "level": "hard",
+  "note": "Penerus Perl 6 yang ekspresif.",
+  "noteEn": "The expressive successor to Perl 6."
+ },
+ {
+  "name": "React Native",
+  "year": 2015,
+  "level": "normal",
+  "note": "Aplikasi mobile native dengan React.",
+  "noteEn": "Native mobile apps with React."
+ },
+ {
+  "name": "Redux",
+  "year": 2015,
+  "level": null,
+  "note": "Pengelola state yang dapat diprediksi.",
+  "noteEn": "A predictable state container."
+ },
+ {
+  "name": "TensorFlow",
+  "year": 2015,
+  "level": null,
+  "note": "Pustaka machine learning dari Google.",
+  "noteEn": "Machine learning library from Google."
+ },
+ {
+  "name": "ASP.NET Core",
+  "year": 2016,
+  "level": "normal",
+  "note": "Web framework .NET lintas platform.",
+  "noteEn": "Cross-platform .NET web framework."
+ },
+ {
+  "name": "Emojicode",
+  "year": 2016,
+  "level": "hell",
+  "note": "Kode ditulis dengan emoji.",
+  "noteEn": "Code written with emoji."
+ },
+ {
+  "name": "Fastify",
+  "year": 2016,
+  "level": "normal",
+  "note": "Server Node.js yang cepat.",
+  "noteEn": "A fast Node.js server."
+ },
+ {
+  "name": "Gleam",
+  "year": 2016,
+  "level": "hard",
+  "note": "Fungsional bertipe di atas BEAM.",
+  "noteEn": "Statically typed functional language on the BEAM."
+ },
+ {
+  "name": "Next.js",
+  "year": 2016,
+  "level": "normal",
+  "note": "Framework React dari Vercel.",
+  "noteEn": "React framework from Vercel."
+ },
+ {
+  "name": "Nuxt",
+  "year": 2016,
+  "level": "normal",
+  "note": "Framework Vue full-stack.",
+  "noteEn": "Full-stack Vue framework."
+ },
+ {
+  "name": "Odin",
+  "year": 2016,
+  "level": "hard",
+  "note": "Alternatif C untuk pemrograman sistem.",
+  "noteEn": "A C alternative for systems programming."
+ },
+ {
+  "name": "PyTorch",
+  "year": 2016,
+  "level": null,
+  "note": "Pustaka deep learning.",
+  "noteEn": "Deep learning library."
+ },
+ {
+  "name": "Svelte",
+  "year": 2016,
+  "level": "normal",
+  "note": "Dikompilasi saat build tanpa virtual DOM.",
+  "noteEn": "Compiled at build time, no virtual DOM."
+ },
+ {
+  "name": "Zig",
+  "year": 2016,
+  "level": "hard",
+  "note": "Alternatif C yang eksplisit.",
+  "noteEn": "An explicit alternative to C."
+ },
+ {
+  "name": "Flutter",
+  "year": 2017,
+  "level": "normal",
+  "note": "UI lintas platform dari Google.",
+  "noteEn": "Cross-platform UI from Google."
+ },
+ {
+  "name": "NestJS",
+  "year": 2017,
+  "level": "normal",
+  "note": "Framework Node.js terinspirasi Angular.",
+  "noteEn": "Node.js framework inspired by Angular."
+ },
+ {
+  "name": "WebAssembly",
+  "year": 2017,
+  "level": null,
+  "note": "Format biner untuk menjalankan kode cepat di browser.",
+  "noteEn": "A binary format for running fast code in the browser."
+ },
+ {
+  "name": "Deno",
+  "year": 2018,
+  "level": null,
+  "note": "Runtime JavaScript/TypeScript yang aman secara bawaan.",
+  "noteEn": "A JavaScript/TypeScript runtime that is secure by default."
+ },
+ {
+  "name": "FastAPI",
+  "year": 2018,
+  "level": "normal",
+  "note": "API Python modern dan async.",
+  "noteEn": "Modern async Python APIs."
+ },
+ {
+  "name": "Hugging Face Transformers",
+  "year": 2018,
+  "level": null,
+  "note": "Model AI siap pakai untuk teks, gambar, dan suara.",
+  "noteEn": "Ready-made AI models for text, images, and audio."
+ },
+ {
+  "name": "Ktor",
+  "year": 2018,
+  "level": "normal",
+  "note": "Framework web Kotlin dari JetBrains.",
+  "noteEn": "Kotlin web framework from JetBrains."
+ },
+ {
+  "name": "Rockstar",
+  "year": 2018,
+  "level": "hell",
+  "note": "Kode berupa lirik lagu rock.",
+  "noteEn": "Code written as rock song lyrics."
+ },
+ {
+  "name": "SolidJS",
+  "year": 2018,
+  "level": "normal",
+  "note": "Reaktivitas halus tanpa virtual DOM.",
+  "noteEn": "Fine-grained reactivity without a virtual DOM."
+ },
+ {
+  "name": "Vyper",
+  "year": 2018,
+  "level": null,
+  "note": "Kontrak pintar ala Python.",
+  "noteEn": "Python-like smart contracts."
+ },
+ {
+  "name": "Alpine.js",
+  "year": 2019,
+  "level": "normal",
+  "note": "Interaktivitas ringan lewat atribut HTML.",
+  "noteEn": "Lightweight interactivity through HTML attributes."
+ },
+ {
+  "name": "Framer Motion",
+  "year": 2019,
+  "level": null,
+  "note": "Animasi deklaratif untuk React.",
+  "noteEn": "Declarative animation for React."
+ },
+ {
+  "name": "Lit",
+  "year": 2019,
+  "level": null,
+  "note": "Web component ringan.",
+  "noteEn": "Lightweight web components."
+ },
+ {
+  "name": "Move",
+  "year": 2019,
+  "level": null,
+  "note": "Aset digital aman.",
+  "noteEn": "Safe digital assets."
+ },
+ {
+  "name": "Prisma",
+  "year": 2019,
+  "level": null,
+  "note": "ORM modern untuk TypeScript dan Node.js.",
+  "noteEn": "A modern ORM for TypeScript and Node.js."
+ },
+ {
+  "name": "Tailwind CSS",
+  "year": 2019,
+  "level": "normal",
+  "note": "CSS utility-first.",
+  "noteEn": "Utility-first CSS."
+ },
+ {
+  "name": "Tauri",
+  "year": 2019,
+  "level": null,
+  "note": "Aplikasi desktop ringan dengan inti Rust.",
+  "noteEn": "Lightweight desktop apps with a Rust core."
+ },
+ {
+  "name": "V",
+  "year": 2019,
+  "level": null,
+  "note": "Bahasa sederhana dan cepat dikompilasi.",
+  "noteEn": "A simple, fast-compiling language."
+ },
+ {
+  "name": "Zustand",
+  "year": 2019,
+  "level": null,
+  "note": "Pengelola state kecil untuk React.",
+  "noteEn": "A tiny state manager for React."
+ },
+ {
+  "name": "htmx",
+  "year": 2020,
+  "level": "normal",
+  "note": "Interaksi dinamis lewat atribut HTML.",
+  "noteEn": "Dynamic interactions through HTML attributes."
+ },
+ {
+  "name": "Playwright",
+  "year": 2020,
+  "level": null,
+  "note": "Otomatisasi dan pengujian browser.",
+  "noteEn": "Browser automation and testing."
+ },
+ {
+  "name": "Supabase",
+  "year": 2020,
+  "level": null,
+  "note": "Backend PostgreSQL, auth, dan penyimpanan siap pakai.",
+  "noteEn": "A PostgreSQL backend with auth and storage, ready to use."
+ },
+ {
+  "name": "SvelteKit",
+  "year": 2020,
+  "level": "normal",
+  "note": "Framework aplikasi untuk Svelte.",
+  "noteEn": "Application framework for Svelte."
+ },
+ {
+  "name": "tRPC",
+  "year": 2020,
+  "level": null,
+  "note": "API end-to-end bertipe aman tanpa skema.",
+  "noteEn": "End-to-end typesafe APIs without a schema."
+ },
+ {
+  "name": "Vite",
+  "year": 2020,
+  "level": null,
+  "note": "Alat build dan server dev frontend yang cepat.",
+  "noteEn": "A fast frontend build tool and dev server."
+ },
+ {
+  "name": "Astro",
+  "year": 2021,
+  "level": "normal",
+  "note": "Situs konten dengan sedikit JavaScript.",
+  "noteEn": "Content sites with minimal JavaScript."
+ },
+ {
+  "name": "Hono",
+  "year": 2021,
+  "level": "normal",
+  "note": "Web framework ringan untuk edge.",
+  "noteEn": "Lightweight web framework for the edge."
+ },
+ {
+  "name": "Remix",
+  "year": 2021,
+  "level": "normal",
+  "note": "Framework web berbasis standar.",
+  "noteEn": "Web framework built on web standards."
+ },
+ {
+  "name": "Bun",
+  "year": 2022,
+  "level": null,
+  "note": "Runtime JavaScript serba-ada yang sangat cepat.",
+  "noteEn": "An all-in-one, very fast JavaScript runtime."
+ },
+ {
+  "name": "Carbon",
+  "year": 2022,
+  "level": null,
+  "note": "Penerus eksperimental C++.",
+  "noteEn": "An experimental successor to C++."
+ },
+ {
+  "name": "Qwik",
+  "year": 2022,
+  "level": "normal",
+  "note": "Resumability tanpa hidrasi.",
+  "noteEn": "Resumability without hydration."
+ },
+ {
+  "name": "Roc",
+  "year": 2022,
+  "level": null,
+  "note": "Fungsional cepat dan ramah.",
+  "noteEn": "Fast, friendly functional language."
+ },
+ {
+  "name": "Mojo",
+  "year": 2023,
+  "level": "hard",
+  "note": "Superset Python untuk AI.",
+  "noteEn": "A Python superset for AI."
+ },
+ {
+  "name": "shadcn/ui",
+  "year": 2023,
+  "level": null,
+  "note": "Kumpulan komponen UI yang disalin ke proyekmu.",
+  "noteEn": "UI components you copy into your own project."
+ }
+]
